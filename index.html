@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Son Travels & Tours Limited offers India tour packages and worldwide flight ticket booking services." />
+  <title>Son Travels & Tours Limited | India Tours & Worldwide Flights</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --navy: #0d1b2a;
+  --blue: #1b4d89;
+  --orange: #f97316;
+  --gold: #f5b942;
+  --cream: #fff7ed;
+  --soft: #f8fafc;
+  --muted: #64748b;
+  --text: #14213d;
+  --white: #ffffff;
+  --border: #e2e8f0;
+  --shadow: 0 24px 80px rgba(15, 23, 42, 0.14);
+  --radius: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding: 96px 0;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.navbar {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.brand small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  margin-top: -4px;
+}
+
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--orange), var(--blue));
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(249, 115, 22, 0.25);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  color: #334155;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: var(--orange);
+}
+
+.nav-cta {
+  background: var(--navy);
+  color: var(--white) !important;
+  padding: 12px 18px;
+  border-radius: 999px;
+}
+
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  background: var(--navy);
+  margin: 5px 0;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(249, 115, 22, 0.16), transparent 34%),
+    radial-gradient(circle at top right, rgba(27, 77, 137, 0.14), transparent 36%),
+    linear-gradient(180deg, #fffaf4 0%, #ffffff 74%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -170px -10%;
+  height: 260px;
+  background: linear-gradient(90deg, rgba(249, 115, 22, 0.12), rgba(27, 77, 137, 0.08));
+  transform: rotate(-2deg);
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--orange);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(3rem, 7vw, 5.9rem);
+  line-height: 0.96;
+  letter-spacing: -0.075em;
+  margin-bottom: 24px;
+  color: var(--navy);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+  margin-bottom: 18px;
+  color: var(--navy);
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+  color: var(--navy);
+}
+
+.hero-text {
+  max-width: 640px;
+  color: #475569;
+  font-size: 1.12rem;
+  margin-bottom: 32px;
+}
+
+.hero-actions,
+.hero-actions + .trust-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border: 0;
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button.primary {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--orange), #e85d04);
+  box-shadow: 0 14px 34px rgba(249, 115, 22, 0.3);
+}
+
+.button.secondary {
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.button.light {
+  color: var(--navy);
+  background: var(--white);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+}
+
+.trust-row {
+  margin-top: 28px;
+  color: #334155;
+  font-weight: 700;
+}
+
+.trust-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trust-row span::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.hero-card {
+  position: relative;
+  min-height: 520px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 36px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.hero-card img {
+  width: min(480px, 92%);
+}
+
+.floating-card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 18px;
+  padding: 14px 18px;
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.12);
+}
+
+.floating-card strong,
+.floating-card span {
+  display: block;
+}
+
+.mini-label {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.top-card {
+  top: 30px;
+  right: 30px;
+}
+
+.bottom-card {
+  bottom: 34px;
+  left: 30px;
+}
+
+.booking-strip {
+  margin-top: -46px;
+  position: relative;
+  z-index: 5;
+}
+
+.booking-panel {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+.booking-panel h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: 22px;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 14px;
+  align-items: end;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  color: #334155;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px 14px;
+  color: var(--text);
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: rgba(249, 115, 22, 0.75);
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.12);
+}
+
+.form-note {
+  min-height: 24px;
+  margin: 14px 0 0;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.section-heading {
+  margin-bottom: 42px;
+}
+
+.section-heading.narrow {
+  max-width: 720px;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.split-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  gap: 32px;
+  align-items: end;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.service-card,
+.tour-card,
+.contact-form {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 14px 42px rgba(15, 23, 42, 0.07);
+}
+
+.service-card {
+  padding: 30px;
+}
+
+.service-card p,
+.tour-card p,
+.about-grid p,
+.contact-grid p,
+.site-footer p {
+  color: var(--muted);
+}
+
+.icon-box {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--blue), var(--navy));
+  border-radius: 18px;
+  font-weight: 900;
+  margin-bottom: 22px;
+}
+
+.muted {
+  background: var(--soft);
+}
+
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.tour-card {
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 52px rgba(15, 23, 42, 0.12);
+}
+
+.tour-image {
+  min-height: 190px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.tour-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, rgba(13, 27, 42, 0.16));
+}
+
+.tour-image.golden {
+  background: linear-gradient(135deg, rgba(245, 185, 66, 0.82), rgba(249, 115, 22, 0.72)), url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjI4MCIgdmlld0JveD0iMCAwIDUwMCAyODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgZmlsbD0iI0ZGRkZGRiIgZmlsbC1vcGFjaXR5PSIwLjM4Ij4KICAgIDxwYXRoIGQ9Ik04MCAxOTBINDIwVjI1MEg4MFYxOTBaIi8+CiAgICA8cGF0aCBkPSJNMTIwIDEyMEgxOTBWMjUwSDEyMFYxMjBaIi8+CiAgICA8cGF0aCBkPSJNMzEwIDEyMEgzODBWMjUwSDMxMFYxMjBaIi8+CiAgICA8cGF0aCBkPSJNMjA1IDEwMEgyOTVWMjUwSDIwNVYxMDBaIi8+CiAgICA8cGF0aCBkPSJNMTE1IDEyMEMxMjQgNzggMTQ2IDU4IDE1NSA1OEMxNjQgNTggMTgyIDc4IDE5MSAxMjBIMTE1WiIvPgogICAgPHBhdGggZD0iTTMwNSAxMjBDMzE0IDc4IDMzNiA1OCAzNDUgNThDMzU0IDU4IDM3MiA3OCAzODEgMTIwSDMwNVoiLz4KICAgIDxwYXRoIGQ9Ik0xOTggMTAxQzIxMCA0OCAyMzkgMjQgMjUwIDI0QzI2MSAyNCAyOTAgNDggMzAyIDEwMUgxOThaIi8+CiAgPC9nPgo8L3N2Zz4K");
+}
+
+.tour-image.kerala {
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.8), rgba(20, 184, 166, 0.7)), url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjI4MCIgdmlld0JveD0iMCAwIDUwMCAyODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utb3BhY2l0eT0iMC40MiIgc3Ryb2tlLXdpZHRoPSIxMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik0xNDIgMjQ1QzE1NCAxOTIgMTU1IDEzOSAxNDggODgiLz4KICAgIDxwYXRoIGQ9Ik0xNDggODhDMTA4IDc2IDc2IDgyIDQ4IDEwNiIvPgogICAgPHBhdGggZD0iTTE0OCA4OEMxMDggMTEwIDkyIDEzOSA4OCAxNzYiLz4KICAgIDxwYXRoIGQ9Ik0xNDggODhDMTc0IDU0IDIwNyA0MiAyNDggNTAiLz4KICAgIDxwYXRoIGQ9Ik0xNDggODhDMTk0IDg2IDIyNiAxMDQgMjUwIDE0MCIvPgogICAgPHBhdGggZD0iTTM0OCAyNDVDMzYwIDE5MiAzNjEgMTM5IDM1NCA4OCIvPgogICAgPHBhdGggZD0iTTM1NCA4OEMzMTQgNzYgMjgyIDgyIDI1NCAxMDYiLz4KICAgIDxwYXRoIGQ9Ik0zNTQgODhDMzE0IDExMCAyOTggMTM5IDI5NCAxNzYiLz4KICAgIDxwYXRoIGQ9Ik0zNTQgODhDMzgwIDU0IDQxMyA0MiA0NTQgNTAiLz4KICA8L2c+Cjwvc3ZnPgo=");
+}
+
+.tour-image.goa {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.82), rgba(245, 158, 11, 0.72)), url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjI4MCIgdmlld0JveD0iMCAwIDUwMCAyODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utb3BhY2l0eT0iMC40MiIgc3Ryb2tlLXdpZHRoPSIxMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik0yMCAxOThDNjAgMTY4IDEwMCAxNjggMTQwIDE5OEMxODAgMjI4IDIyMCAyMjggMjYwIDE5OEMzMDAgMTY4IDM0MCAxNjggMzgwIDE5OEM0MjAgMjI4IDQ2MCAyMjggNTAwIDE5OCIvPgogICAgPHBhdGggZD0iTTIwIDIzOEM2MCAyMDggMTAwIDIwOCAxNDAgMjM4QzE4MCAyNjggMjIwIDI2OCAyNjAgMjM4QzMwMCAyMDggMzQwIDIwOCAzODAgMjM4QzQyMCAyNjggNDYwIDI2OCA1MDAgMjM4Ii8+CiAgPC9nPgogIDxjaXJjbGUgY3g9IjM5MiIgY3k9IjcwIiByPSI0NSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1vcGFjaXR5PSIwLjM0Ii8+Cjwvc3ZnPgo=");
+}
+
+.tour-image.rajasthan {
+  background: linear-gradient(135deg, rgba(194, 65, 12, 0.78), rgba(126, 34, 206, 0.72)), url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjI4MCIgdmlld0JveD0iMCAwIDUwMCAyODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgZmlsbD0iI0ZGRkZGRiIgZmlsbC1vcGFjaXR5PSIwLjM4Ij4KICAgIDxwYXRoIGQ9Ik04MCAxOTBINDIwVjI1MEg4MFYxOTBaIi8+CiAgICA8cGF0aCBkPSJNMTIwIDEyMEgxOTBWMjUwSDEyMFYxMjBaIi8+CiAgICA8cGF0aCBkPSJNMzEwIDEyMEgzODBWMjUwSDMxMFYxMjBaIi8+CiAgICA8cGF0aCBkPSJNMjA1IDEwMEgyOTVWMjUwSDIwNVYxMDBaIi8+CiAgICA8cGF0aCBkPSJNMTE1IDEyMEMxMjQgNzggMTQ2IDU4IDE1NSA1OEMxNjQgNTggMTgyIDc4IDE5MSAxMjBIMTE1WiIvPgogICAgPHBhdGggZD0iTTMwNSAxMjBDMzE0IDc4IDMzNiA1OCAzNDUgNThDMzU0IDU4IDM3MiA3OCAzODEgMTIwSDMwNVoiLz4KICAgIDxwYXRoIGQ9Ik0xOTggMTAxQzIxMCA0OCAyMzkgMjQgMjUwIDI0QzI2MSAyNCAyOTAgNDggMzAyIDEwMUgxOThaIi8+CiAgPC9nPgo8L3N2Zz4K");
+}
+
+.tour-image.spiritual {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.78), rgba(236, 72, 153, 0.62)), url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjI4MCIgdmlld0JveD0iMCAwIDUwMCAyODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTI0IDIxNEM5NCAxNjAgMTU0IDI2MCAyMjQgMjA4QzI4OCAxNjAgMzI2IDEyMCAzOTIgMTUwQzQzMCAxNjcgNDUyIDIwMCA0OTIgMTc2IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS1vcGFjaXR5PSIwLjQ1IiBzdHJva2Utd2lkdGg9IjE2IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTMyIDEyOEgzMDAiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLW9wYWNpdHk9IjAuMzIiIHN0cm9rZS13aWR0aD0iMTQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xNzAgOTBIMzMwIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS1vcGFjaXR5PSIwLjMyIiBzdHJva2Utd2lkdGg9IjE0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI5OCIgY3k9Ijc0IiByPSIzOCIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1vcGFjaXR5PSIwLjI2Ii8+Cjwvc3ZnPgo=");
+}
+
+.tour-image.south {
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.8), rgba(234, 88, 12, 0.66)), url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjI4MCIgdmlld0JveD0iMCAwIDUwMCAyODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgZmlsbD0iI0ZGRkZGRiIgZmlsbC1vcGFjaXR5PSIwLjM4Ij4KICAgIDxyZWN0IHg9Ijk2IiB5PSIyMDIiIHdpZHRoPSIzMDgiIGhlaWdodD0iMzgiIHJ4PSI4Ii8+CiAgICA8cmVjdCB4PSIxMzIiIHk9IjE1NiIgd2lkdGg9IjIzNiIgaGVpZ2h0PSI1NCIgcng9IjgiLz4KICAgIDxyZWN0IHg9IjE2OCIgeT0iMTEyIiB3aWR0aD0iMTY0IiBoZWlnaHQ9IjUyIiByeD0iOCIvPgogICAgPHBhdGggZD0iTTI1MCAzNEwzNDIgMTE4SDE1OEwyNTAgMzRaIi8+CiAgICA8cmVjdCB4PSIyMzAiIHk9IjE1NiIgd2lkdGg9IjQyIiBoZWlnaHQ9Ijg0IiByeD0iMjAiIGZpbGwtb3BhY2l0eT0iMC41NSIvPgogIDwvZz4KPC9zdmc+Cg==");
+}
+
+.tour-content {
+  padding: 24px;
+}
+
+.pill {
+  display: inline-flex;
+  color: var(--blue);
+  background: #eff6ff;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 800;
+  font-size: 0.78rem;
+  margin-bottom: 14px;
+}
+
+.tour-content a {
+  color: var(--orange);
+  font-weight: 900;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.86fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about-image {
+  background: linear-gradient(135deg, #eff6ff, #fff7ed);
+  border: 1px solid var(--border);
+  border-radius: 34px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.stats-grid div {
+  padding: 18px;
+  border-radius: 18px;
+  background: var(--soft);
+  border: 1px solid var(--border);
+}
+
+.stats-grid strong,
+.stats-grid span {
+  display: block;
+}
+
+.stats-grid strong {
+  color: var(--orange);
+  font-size: 1.25rem;
+}
+
+.stats-grid span {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.cta-section {
+  padding: 30px 0;
+}
+
+.cta-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 46px;
+  border-radius: 34px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+  box-shadow: var(--shadow);
+}
+
+.cta-card h2 {
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+.cta-card .eyebrow {
+  color: var(--gold);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.78fr 1fr;
+  gap: 50px;
+}
+
+.contact-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.contact-list p {
+  margin: 0;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--soft);
+  border: 1px solid var(--border);
+}
+
+.contact-form {
+  padding: 30px;
+  display: grid;
+  gap: 18px;
+}
+
+.site-footer {
+  background: var(--navy);
+  color: var(--white);
+  padding: 56px 0 24px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr 0.7fr;
+  gap: 36px;
+}
+
+.footer-brand small,
+.footer-grid p {
+  color: #cbd5e1;
+}
+
+.footer-grid h3 {
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.footer-grid a {
+  display: block;
+  color: #cbd5e1;
+  margin-bottom: 10px;
+}
+
+.footer-grid a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  margin-top: 34px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+@media (max-width: 980px) {
+  .hero-grid,
+  .about-grid,
+  .contact-grid,
+  .split-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    min-height: 430px;
+  }
+
+  .booking-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-form button {
+    grid-column: 1 / -1;
+  }
+
+  .service-grid,
+  .tour-grid,
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .section-padding {
+    padding: 70px 0;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 78px;
+    left: 20px;
+    right: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 16px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 14px;
+  }
+
+  .nav-cta {
+    text-align: center;
+  }
+
+  .hero {
+    padding-top: 50px;
+  }
+
+  .hero-card {
+    min-height: 370px;
+    border-radius: 28px;
+  }
+
+  .floating-card {
+    position: static;
+    margin: 8px;
+  }
+
+  .booking-strip {
+    margin-top: 0;
+  }
+
+  .booking-panel,
+  .contact-form,
+  .cta-card {
+    padding: 24px;
+  }
+
+  .booking-form,
+  .service-grid,
+  .tour-grid,
+  .stats-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+</style>
+<!-- Single-file visible preview generated for easy opening. -->
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Son Travels & Tours Limited home">
+        <span class="brand-mark">ST</span>
+        <span>
+          <strong>Son Travels</strong>
+          <small>& Tours Limited</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links">
+        <a href="#tours">India Tours</a>
+        <a href="#flights">Flights</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="#contact">Book Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-padding">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">India tour packages • Worldwide flight tickets</p>
+          <h1>Explore India. Fly anywhere in the world.</h1>
+          <p class="hero-text">
+            Son Travels & Tours Limited helps travelers discover India’s culture, heritage, beaches, food, and spiritual destinations while also arranging reliable flight tickets to destinations worldwide.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#tours">View India Tours</a>
+            <a class="button secondary" href="#flights">Book a Flight</a>
+          </div>
+          <div class="trust-row" aria-label="Service highlights">
+            <span>Custom itineraries</span>
+            <span>Group & family tours</span>
+            <span>Worldwide tickets</span>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="India travel illustration">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjgwIiBoZWlnaHQ9IjU2MCIgdmlld0JveD0iMCAwIDY4MCA1NjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPkluZGlhIHRyYXZlbCBpbGx1c3RyYXRpb248L3RpdGxlPgogIDxkZXNjIGlkPSJkZXNjIj5BIHBsYW5lIGZseWluZyBvdmVyIHN0eWxpemVkIEluZGlhbiBsYW5kbWFya3MgYW5kIHRyYXZlbCByb3V0ZSBsaW5lcy48L2Rlc2M+CiAgPHJlY3Qgd2lkdGg9IjY4MCIgaGVpZ2h0PSI1NjAiIHJ4PSIzNiIgZmlsbD0iI0ZGRjdFRCIvPgogIDxjaXJjbGUgY3g9IjE3MCIgY3k9IjEzMCIgcj0iODYiIGZpbGw9IiNGOTczMTYiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxjaXJjbGUgY3g9IjU0MCIgY3k9IjkwIiByPSIxMTAiIGZpbGw9IiMxQjREODkiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxwYXRoIGQ9Ik05MiA0MjRDMTY0IDM2MCAyMTcgMzU2IDI4MCAzOTRDMzQ2IDQzNCAzOTkgNDI3IDQ2MCAzODJDNTA3IDM0NyA1NTYgMzI2IDYxNiAzNTQiIHN0cm9rZT0iIzFCNEQ4OSIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjIgMjAiLz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3MiAxODgpIj4KICAgIDxyZWN0IHg9IjM2IiB5PSIxMzgiIHdpZHRoPSIxNjgiIGhlaWdodD0iNzIiIHJ4PSIxMCIgZmlsbD0iIzBEMUIyQSIvPgogICAgPHJlY3QgeD0iNTgiIHk9IjkyIiB3aWR0aD0iMTI0IiBoZWlnaHQ9Ijc4IiByeD0iMTIiIGZpbGw9IiNGNUI5NDIiLz4KICAgIDxwYXRoIGQ9Ik00NyA5M0M1OCA0MiA4OCAxOCAxMjAgMThDMTUyIDE4IDE4MiA0MiAxOTMgOTNINDdaIiBmaWxsPSIjRjk3MzE2Ii8+CiAgICA8cGF0aCBkPSJNODEgOTJDODkgNjAgMTAyIDQ0IDEyMCA0NEMxMzggNDQgMTUxIDYwIDE1OSA5Mkg4MVoiIGZpbGw9IiNGRkY3RUQiLz4KICAgIDxyZWN0IHg9Ijg4IiB5PSIxMzgiIHdpZHRoPSIzNCIgaGVpZ2h0PSI3MiIgcng9IjE3IiBmaWxsPSIjRkZGN0VEIi8+CiAgICA8cmVjdCB4PSIxMzYiIHk9IjEzOCIgd2lkdGg9IjM0IiBoZWlnaHQ9IjcyIiByeD0iMTciIGZpbGw9IiNGRkY3RUQiLz4KICAgIDxyZWN0IHk9IjE5MCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSIyNCIgcng9IjEyIiBmaWxsPSIjMUI0RDg5Ii8+CiAgPC9nPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM5MCAyMTQpIj4KICAgIDxyZWN0IHg9IjE4IiB5PSIxMjQiIHdpZHRoPSIxNzAiIGhlaWdodD0iNzAiIHJ4PSIxMCIgZmlsbD0iIzBEMUIyQSIvPgogICAgPHJlY3QgeD0iNDIiIHk9IjcwIiB3aWR0aD0iMTIyIiBoZWlnaHQ9Ijc2IiByeD0iMTAiIGZpbGw9IiMxQjREODkiLz4KICAgIDxwYXRoIGQ9Ik0xMDMgMEwxOTIgNzJIMTRMMTAzIDBaIiBmaWxsPSIjRjk3MzE2Ii8+CiAgICA8cmVjdCB4PSI3NiIgeT0iMTI0IiB3aWR0aD0iNDQiIGhlaWdodD0iNzAiIHJ4PSIyMiIgZmlsbD0iI0ZGRjdFRCIvPgogICAgPHJlY3QgeD0iMCIgeT0iMTg0IiB3aWR0aD0iMjEwIiBoZWlnaHQ9IjI0IiByeD0iMTIiIGZpbGw9IiNGNUI5NDIiLz4KICA8L2c+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzc4IDkyKSByb3RhdGUoLTgpIj4KICAgIDxwYXRoIGQ9Ik0xNyA0OEwyNDMgMEMyNTMgLTIgMjU5IDExIDI1MCAxN0wxNTAgODJMMTcwIDE1NEMxNzIgMTYyIDE2MiAxNjggMTU2IDE2MkwxMTEgMTE0TDU1IDE1M0M0NyAxNTkgMzYgMTUxIDQxIDE0MUw2OSA5MkwxNCA2NUM1IDYxIDcgNTAgMTcgNDhaIiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMwRDFCMkEiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgPHBhdGggZD0iTTExMiAxMTNMMTQ5IDgyIiBzdHJva2U9IiNGOTczMTYiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPC9nPgogIDxwYXRoIGQ9Ik0xMTggNDc2SDU4NSIgc3Ryb2tlPSIjRTJFOEYwIiBzdHJva2Utd2lkdGg9IjE0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTY0IDQ3NkgyODYiIHN0cm9rZT0iI0Y5NzMxNiIgc3Ryb2tlLXdpZHRoPSIxNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBhdGggZD0iTTM5MiA0NzZINTAwIiBzdHJva2U9IiMxQjREODkiIHN0cm9rZS13aWR0aD0iMTQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" alt="Illustration of a plane flying over Indian landmarks" />
+          <div class="floating-card top-card">
+            <span class="mini-label">Popular route</span>
+            <strong>Delhi • Agra • Jaipur</strong>
+          </div>
+          <div class="floating-card bottom-card">
+            <span class="mini-label">Ticketing</span>
+            <strong>Flights worldwide</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-strip" id="flights" aria-labelledby="flight-title">
+      <div class="container">
+        <div class="booking-panel">
+          <div>
+            <p class="eyebrow">Flight ticket request</p>
+            <h2 id="flight-title">Tell us where you want to fly</h2>
+          </div>
+          <form class="booking-form" id="flightForm">
+            <label>
+              From
+              <input type="text" name="from" placeholder="City or airport" required />
+            </label>
+            <label>
+              To
+              <input type="text" name="to" placeholder="Destination" required />
+            </label>
+            <label>
+              Travel date
+              <input type="date" name="date" required />
+            </label>
+            <label>
+              Travelers
+              <select name="travellers">
+                <option>1 traveler</option>
+                <option>2 travelers</option>
+                <option>3 travelers</option>
+                <option>4+ travelers</option>
+              </select>
+            </label>
+            <button class="button primary" type="submit">Request Ticket Quote</button>
+          </form>
+          <p class="form-note" id="flightFormMessage" role="status"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding" id="services">
+      <div class="container">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Our services</p>
+          <h2>Travel support from planning to departure</h2>
+          <p>Choose a ready-made India tour, request a custom itinerary, or ask our team to help you find suitable flights for your journey.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="icon-box">01</div>
+            <h3>India Tour Packages</h3>
+            <p>Guided and custom tour plans across Delhi, Agra, Jaipur, Kerala, Goa, Mumbai, Rajasthan, Varanasi, and more.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon-box">02</div>
+            <h3>Worldwide Flight Tickets</h3>
+            <p>Flight ticket assistance for business trips, holidays, family travel, and international connections.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon-box">03</div>
+            <h3>Group & Family Travel</h3>
+            <p>Flexible arrangements for couples, families, students, corporate groups, and special interest tours.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding muted" id="tours">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Featured India tours</p>
+            <h2>Discover India with carefully planned experiences</h2>
+          </div>
+          <p>These sample packages can be customized by travel date, budget, hotel preference, group size, and pace.</p>
+        </div>
+
+        <div class="tour-grid">
+          <article class="tour-card">
+            <div class="tour-image golden"></div>
+            <div class="tour-content">
+              <span class="pill">5–7 days</span>
+              <h3>Golden Triangle Tour</h3>
+              <p>Delhi, Agra, and Jaipur with heritage sites, markets, forts, palaces, and the Taj Mahal.</p>
+              <a href="#contact">Request this tour</a>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <div class="tour-image kerala"></div>
+            <div class="tour-content">
+              <span class="pill">6–8 days</span>
+              <h3>Kerala Backwaters Escape</h3>
+              <p>Relax with lush landscapes, houseboat experiences, hill stations, and coastal culture.</p>
+              <a href="#contact">Request this tour</a>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <div class="tour-image goa"></div>
+            <div class="tour-content">
+              <span class="pill">4–6 days</span>
+              <h3>Goa & Mumbai Holiday</h3>
+              <p>Combine beaches, city life, nightlife, cuisine, shopping, and memorable coastal views.</p>
+              <a href="#contact">Request this tour</a>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <div class="tour-image rajasthan"></div>
+            <div class="tour-content">
+              <span class="pill">7–10 days</span>
+              <h3>Rajasthan Heritage Journey</h3>
+              <p>Explore Jaipur, Jodhpur, Udaipur, desert landscapes, royal architecture, and local traditions.</p>
+              <a href="#contact">Request this tour</a>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <div class="tour-image spiritual"></div>
+            <div class="tour-content">
+              <span class="pill">5–9 days</span>
+              <h3>Spiritual North India</h3>
+              <p>Visit Varanasi, Rishikesh, Haridwar, and sacred river experiences with peaceful itineraries.</p>
+              <a href="#contact">Request this tour</a>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <div class="tour-image south"></div>
+            <div class="tour-content">
+              <span class="pill">7–12 days</span>
+              <h3>South India Discovery</h3>
+              <p>Temples, beaches, hill stations, cultural cities, and food experiences across southern India.</p>
+              <a href="#contact">Request this tour</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding" id="about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDU2MCA0NTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPlRyYXZlbCBzdXBwb3J0IGlsbHVzdHJhdGlvbjwvdGl0bGU+CiAgPGRlc2MgaWQ9ImRlc2MiPkEgY29uc3VsdGFudCBkZXNrIHdpdGggcGFzc3BvcnQsIHRpY2tldCwgZ2xvYmUsIGFuZCBzdWl0Y2FzZSBpY29ucy48L2Rlc2M+CiAgPHJlY3Qgd2lkdGg9IjU2MCIgaGVpZ2h0PSI0NTAiIHJ4PSIzMiIgZmlsbD0iI0ZGRkZGRiIvPgogIDxjaXJjbGUgY3g9IjEyMiIgY3k9Ijk2IiByPSI3MCIgZmlsbD0iI0Y5NzMxNiIgZmlsbC1vcGFjaXR5PSIwLjEzIi8+CiAgPGNpcmNsZSBjeD0iNDMwIiBjeT0iMTEyIiByPSI4OCIgZmlsbD0iIzFCNEQ4OSIgZmlsbC1vcGFjaXR5PSIwLjEwIi8+CiAgPHJlY3QgeD0iOTIiIHk9IjI4MCIgd2lkdGg9IjM2NSIgaGVpZ2h0PSI0MiIgcng9IjIxIiBmaWxsPSIjMEQxQjJBIi8+CiAgPHJlY3QgeD0iMTI4IiB5PSIxMzIiIHdpZHRoPSIxOTAiIGhlaWdodD0iMjQ4IiByeD0iMjQiIGZpbGw9IiNGRkY3RUQiIHN0cm9rZT0iI0UyRThGMCIgc3Ryb2tlLXdpZHRoPSI4Ii8+CiAgPHJlY3QgeD0iMTU4IiB5PSIxNjYiIHdpZHRoPSIxMzAiIGhlaWdodD0iMTgiIHJ4PSI5IiBmaWxsPSIjRjk3MzE2Ii8+CiAgPHJlY3QgeD0iMTU4IiB5PSIyMDYiIHdpZHRoPSI4OCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiM5NEEzQjgiLz4KICA8cmVjdCB4PSIxNTgiIHk9IjIzNiIgd2lkdGg9IjExOCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiNDQkQ1RTEiLz4KICA8cmVjdCB4PSIxNTgiIHk9IjI2NiIgd2lkdGg9IjEwNCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiNDQkQ1RTEiLz4KICA8cGF0aCBkPSJNMzUyIDEzMEM0MDIgMTMwIDQ0MiAxNzAgNDQyIDIyMEM0NDIgMjcwIDQwMiAzMTAgMzUyIDMxMEMzMDIgMzEwIDI2MiAyNzAgMjYyIDIyMEMyNjIgMTcwIDMwMiAxMzAgMzUyIDEzMFoiIGZpbGw9IiNFRkY2RkYiIHN0cm9rZT0iIzFCNEQ4OSIgc3Ryb2tlLXdpZHRoPSI4Ii8+CiAgPHBhdGggZD0iTTI2MiAyMjBINDQyTTM1MiAxMzBDMzc2IDE1NCAzODggMTg0IDM4OCAyMjBDMzg4IDI1NiAzNzYgMjg2IDM1MiAzMTBNMzUyIDEzMEMzMjggMTU0IDMxNiAxODQgMzE2IDIyMEMzMTYgMjU2IDMyOCAyODYgMzUyIDMxMCIgc3Ryb2tlPSIjMUI0RDg5IiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxyZWN0IHg9IjM1NiIgeT0iMjk2IiB3aWR0aD0iODgiIGhlaWdodD0iNzgiIHJ4PSIxNiIgZmlsbD0iI0Y1Qjk0MiIgc3Ryb2tlPSIjMEQxQjJBIiBzdHJva2Utd2lkdGg9IjgiLz4KICA8cGF0aCBkPSJNMzgyIDI5NlYyNzhDMzgyIDI2NiAzOTIgMjU2IDQwMCAyNTZDNDA4IDI1NiA0MTggMjY2IDQxOCAyNzhWMjk2IiBzdHJva2U9IiMwRDFCMkEiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBhdGggZD0iTTgyIDM0NEg0ODIiIHN0cm9rZT0iI0NCRDVFMSIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=" alt="Travel consultant helping a customer plan a journey" />
+        </div>
+        <div>
+          <p class="eyebrow">About Son Travels</p>
+          <h2>Your partner for India tours and global flight bookings</h2>
+          <p>
+            Son Travels & Tours Limited is built for travelers who want clear planning, helpful guidance, and flexible options. Whether you are visiting India for culture, family, business, leisure, or spiritual travel, our team can help shape the journey around your needs.
+          </p>
+          <div class="stats-grid">
+            <div>
+              <strong>India</strong>
+              <span>Tour planning focus</span>
+            </div>
+            <div>
+              <strong>Worldwide</strong>
+              <span>Flight ticket support</span>
+            </div>
+            <div>
+              <strong>Flexible</strong>
+              <span>Custom travel options</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding cta-section">
+      <div class="container cta-card">
+        <div>
+          <p class="eyebrow">Ready to travel?</p>
+          <h2>Plan your India tour or request a worldwide flight ticket quote.</h2>
+        </div>
+        <a class="button light" href="#contact">Contact Us Today</a>
+      </div>
+    </section>
+
+    <section class="section-padding" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Send us your travel request</h2>
+          <p>Replace the placeholder contact details below with your company’s real phone number, email, address, and social media links.</p>
+          <div class="contact-list">
+            <p><strong>Phone / WhatsApp:</strong> +000 000 000 000</p>
+            <p><strong>Email:</strong> info@sontravels.example</p>
+            <p><strong>Office:</strong> Your office address here</p>
+            <p><strong>Hours:</strong> Monday – Saturday, 9:00 AM – 6:00 PM</p>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <label>
+            Full name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email or phone
+            <input type="text" name="contact" placeholder="Email or phone number" required />
+          </label>
+          <label>
+            Travel service
+            <select name="service">
+              <option>India tour package</option>
+              <option>Worldwide flight ticket</option>
+              <option>Custom travel request</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" placeholder="Tell us your destination, travel dates, number of travelers, and budget."></textarea>
+          </label>
+          <button class="button primary" type="submit">Send Request</button>
+          <p class="form-note" id="contactFormMessage" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#top">
+          <span class="brand-mark">ST</span>
+          <span>
+            <strong>Son Travels</strong>
+            <small>& Tours Limited</small>
+          </span>
+        </a>
+        <p>India tours and worldwide flight ticket assistance.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="#tours">India Tours</a>
+        <a href="#flights">Flight Tickets</a>
+        <a href="#about">About Us</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="mailto:info@sontravels.example">info@sontravels.example</a>
+        <a href="tel:+000000000000">+000 000 000 000</a>
+        <a href="#contact">Request a quote</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Son Travels & Tours Limited. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+const year = document.querySelector('#year');
+const flightForm = document.querySelector('#flightForm');
+const flightFormMessage = document.querySelector('#flightFormMessage');
+const contactForm = document.querySelector('#contactForm');
+const contactFormMessage = document.querySelector('#contactFormMessage');
+
+year.textContent = new Date().getFullYear();
+
+navToggle.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+navLinks.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+});
+
+flightForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const data = Object.fromEntries(new FormData(flightForm).entries());
+  flightFormMessage.textContent = `Thank you. We received your flight request from ${data.from} to ${data.to}. Connect this form to your email or booking system to receive live inquiries.`;
+  flightForm.reset();
+});
+
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const data = Object.fromEntries(new FormData(contactForm).entries());
+  contactFormMessage.textContent = `Thank you, ${data.name}. Your ${data.service.toLowerCase()} request is ready to be sent. Connect this form to your email or CRM to receive inquiries.`;
+  contactForm.reset();
+});
+
+</script>
+</body>
+</html>
