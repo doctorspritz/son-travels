@@ -1,1126 +1,768 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Son Travels & Tours Limited offers India tour packages and worldwide flight ticket booking services." />
-  <title>Son Travels & Tours Limited | India Tours & Worldwide Flights</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-:root {
-  --navy: #0d1b2a;
-  --blue: #1b4d89;
-  --orange: #f97316;
-  --gold: #f5b942;
-  --cream: #fff7ed;
-  --soft: #f8fafc;
-  --muted: #64748b;
-  --text: #14213d;
-  --white: #ffffff;
-  --border: #e2e8f0;
-  --shadow: 0 24px 80px rgba(15, 23, 42, 0.14);
-  --radius: 24px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: var(--text);
-  background: var(--white);
-  line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.container {
-  width: min(1120px, calc(100% - 40px));
-  margin: 0 auto;
-}
-
-.section-padding {
-  padding: 96px 0;
-}
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-}
-
-.navbar {
-  width: min(1120px, calc(100% - 40px));
-  margin: 0 auto;
-  min-height: 78px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
-
-.brand small {
-  display: block;
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0;
-  margin-top: -4px;
-}
-
-.brand-mark {
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  color: var(--white);
-  background: linear-gradient(135deg, var(--orange), var(--blue));
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(249, 115, 22, 0.25);
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-  color: #334155;
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-.nav-links a:hover {
-  color: var(--orange);
-}
-
-.nav-cta {
-  background: var(--navy);
-  color: var(--white) !important;
-  padding: 12px 18px;
-  border-radius: 999px;
-}
-
-.nav-toggle {
-  display: none;
-  width: 44px;
-  height: 44px;
-  border: 1px solid var(--border);
-  background: var(--white);
-  border-radius: 12px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.nav-toggle span {
-  display: block;
-  height: 2px;
-  background: var(--navy);
-  margin: 5px 0;
-}
-
-.hero {
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at top left, rgba(249, 115, 22, 0.16), transparent 34%),
-    radial-gradient(circle at top right, rgba(27, 77, 137, 0.14), transparent 36%),
-    linear-gradient(180deg, #fffaf4 0%, #ffffff 74%);
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: auto -10% -170px -10%;
-  height: 260px;
-  background: linear-gradient(90deg, rgba(249, 115, 22, 0.12), rgba(27, 77, 137, 0.08));
-  transform: rotate(-2deg);
-}
-
-.hero-grid {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1.02fr 0.98fr;
-  align-items: center;
-  gap: 56px;
-}
-
-.eyebrow {
-  margin: 0 0 12px;
-  color: var(--orange);
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.78rem;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin-top: 0;
-}
-
-h1 {
-  font-size: clamp(3rem, 7vw, 5.9rem);
-  line-height: 0.96;
-  letter-spacing: -0.075em;
-  margin-bottom: 24px;
-  color: var(--navy);
-}
-
-h2 {
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  line-height: 1.04;
-  letter-spacing: -0.055em;
-  margin-bottom: 18px;
-  color: var(--navy);
-}
-
-h3 {
-  font-size: 1.25rem;
-  line-height: 1.25;
-  letter-spacing: -0.03em;
-  margin-bottom: 10px;
-  color: var(--navy);
-}
-
-.hero-text {
-  max-width: 640px;
-  color: #475569;
-  font-size: 1.12rem;
-  margin-bottom: 32px;
-}
-
-.hero-actions,
-.hero-actions + .trust-row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  border: 0;
-  border-radius: 999px;
-  padding: 14px 22px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-}
-
-.button.primary {
-  color: var(--white);
-  background: linear-gradient(135deg, var(--orange), #e85d04);
-  box-shadow: 0 14px 34px rgba(249, 115, 22, 0.3);
-}
-
-.button.secondary {
-  color: var(--navy);
-  background: var(--white);
-  border: 1px solid var(--border);
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
-}
-
-.button.light {
-  color: var(--navy);
-  background: var(--white);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
-}
-
-.trust-row {
-  margin-top: 28px;
-  color: #334155;
-  font-weight: 700;
-}
-
-.trust-row span {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.trust-row span::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--orange);
-}
-
-.hero-card {
-  position: relative;
-  min-height: 520px;
-  display: grid;
-  place-items: center;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  border-radius: 36px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-
-.hero-card img {
-  width: min(480px, 92%);
-}
-
-.floating-card {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(226, 232, 240, 0.95);
-  border-radius: 18px;
-  padding: 14px 18px;
-  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.12);
-}
-
-.floating-card strong,
-.floating-card span {
-  display: block;
-}
-
-.mini-label {
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-}
-
-.top-card {
-  top: 30px;
-  right: 30px;
-}
-
-.bottom-card {
-  bottom: 34px;
-  left: 30px;
-}
-
-.booking-strip {
-  margin-top: -46px;
-  position: relative;
-  z-index: 5;
-}
-
-.booking-panel {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  padding: 30px;
-  box-shadow: var(--shadow);
-}
-
-.booking-panel h2 {
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-  margin-bottom: 22px;
-}
-
-.booking-form {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr) auto;
-  gap: 14px;
-  align-items: end;
-}
-
-label {
-  display: grid;
-  gap: 8px;
-  color: #334155;
-  font-weight: 800;
-  font-size: 0.9rem;
-}
-
-input,
-select,
-textarea {
-  width: 100%;
-  border: 1px solid var(--border);
-  background: #fff;
-  border-radius: 14px;
-  padding: 14px 14px;
-  color: var(--text);
-  font: inherit;
-  outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: rgba(249, 115, 22, 0.75);
-  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.12);
-}
-
-.form-note {
-  min-height: 24px;
-  margin: 14px 0 0;
-  color: var(--blue);
-  font-weight: 700;
-}
-
-.section-heading {
-  margin-bottom: 42px;
-}
-
-.section-heading.narrow {
-  max-width: 720px;
-  text-align: center;
-  margin-inline: auto;
-}
-
-.section-heading p {
-  color: var(--muted);
-  font-size: 1.05rem;
-}
-
-.split-heading {
-  display: grid;
-  grid-template-columns: 1fr 0.75fr;
-  gap: 32px;
-  align-items: end;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.service-card,
-.tour-card,
-.contact-form {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: 0 14px 42px rgba(15, 23, 42, 0.07);
-}
-
-.service-card {
-  padding: 30px;
-}
-
-.service-card p,
-.tour-card p,
-.about-grid p,
-.contact-grid p,
-.site-footer p {
-  color: var(--muted);
-}
-
-.icon-box {
-  width: 54px;
-  height: 54px;
-  display: grid;
-  place-items: center;
-  color: var(--white);
-  background: linear-gradient(135deg, var(--blue), var(--navy));
-  border-radius: 18px;
-  font-weight: 900;
-  margin-bottom: 22px;
-}
-
-.muted {
-  background: var(--soft);
-}
-
-.tour-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.tour-card {
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.tour-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 22px 52px rgba(15, 23, 42, 0.12);
-}
-
-.tour-image {
-  min-height: 190px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.tour-image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent, rgba(13, 27, 42, 0.16));
-}
-
-.tour-image.golden {
-  background: linear-gradient(135deg, rgba(245, 185, 66, 0.82), rgba(249, 115, 22, 0.72)), url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjI4MCIgdmlld0JveD0iMCAwIDUwMCAyODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgZmlsbD0iI0ZGRkZGRiIgZmlsbC1vcGFjaXR5PSIwLjM4Ij4KICAgIDxwYXRoIGQ9Ik04MCAxOTBINDIwVjI1MEg4MFYxOTBaIi8+CiAgICA8cGF0aCBkPSJNMTIwIDEyMEgxOTBWMjUwSDEyMFYxMjBaIi8+CiAgICA8cGF0aCBkPSJNMzEwIDEyMEgzODBWMjUwSDMxMFYxMjBaIi8+CiAgICA8cGF0aCBkPSJNMjA1IDEwMEgyOTVWMjUwSDIwNVYxMDBaIi8+CiAgICA8cGF0aCBkPSJNMTE1IDEyMEMxMjQgNzggMTQ2IDU4IDE1NSA1OEMxNjQgNTggMTgyIDc4IDE5MSAxMjBIMTE1WiIvPgogICAgPHBhdGggZD0iTTMwNSAxMjBDMzE0IDc4IDMzNiA1OCAzNDUgNThDMzU0IDU4IDM3MiA3OCAzODEgMTIwSDMwNVoiLz4KICAgIDxwYXRoIGQ9Ik0xOTggMTAxQzIxMCA0OCAyMzkgMjQgMjUwIDI0QzI2MSAyNCAyOTAgNDggMzAyIDEwMUgxOThaIi8+CiAgPC9nPgo8L3N2Zz4K");
-}
-
-.tour-image.kerala {
-  background: linear-gradient(135deg, rgba(22, 163, 74, 0.8), rgba(20, 184, 166, 0.7)), url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjI4MCIgdmlld0JveD0iMCAwIDUwMCAyODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utb3BhY2l0eT0iMC40MiIgc3Ryb2tlLXdpZHRoPSIxMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik0xNDIgMjQ1QzE1NCAxOTIgMTU1IDEzOSAxNDggODgiLz4KICAgIDxwYXRoIGQ9Ik0xNDggODhDMTA4IDc2IDc2IDgyIDQ4IDEwNiIvPgogICAgPHBhdGggZD0iTTE0OCA4OEMxMDggMTEwIDkyIDEzOSA4OCAxNzYiLz4KICAgIDxwYXRoIGQ9Ik0xNDggODhDMTc0IDU0IDIwNyA0MiAyNDggNTAiLz4KICAgIDxwYXRoIGQ9Ik0xNDggODhDMTk0IDg2IDIyNiAxMDQgMjUwIDE0MCIvPgogICAgPHBhdGggZD0iTTM0OCAyNDVDMzYwIDE5MiAzNjEgMTM5IDM1NCA4OCIvPgogICAgPHBhdGggZD0iTTM1NCA4OEMzMTQgNzYgMjgyIDgyIDI1NCAxMDYiLz4KICAgIDxwYXRoIGQ9Ik0zNTQgODhDMzE0IDExMCAyOTggMTM5IDI5NCAxNzYiLz4KICAgIDxwYXRoIGQ9Ik0zNTQgODhDMzgwIDU0IDQxMyA0MiA0NTQgNTAiLz4KICA8L2c+Cjwvc3ZnPgo=");
-}
-
-.tour-image.goa {
-  background: linear-gradient(135deg, rgba(14, 165, 233, 0.82), rgba(245, 158, 11, 0.72)), url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjI4MCIgdmlld0JveD0iMCAwIDUwMCAyODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utb3BhY2l0eT0iMC40MiIgc3Ryb2tlLXdpZHRoPSIxMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik0yMCAxOThDNjAgMTY4IDEwMCAxNjggMTQwIDE5OEMxODAgMjI4IDIyMCAyMjggMjYwIDE5OEMzMDAgMTY4IDM0MCAxNjggMzgwIDE5OEM0MjAgMjI4IDQ2MCAyMjggNTAwIDE5OCIvPgogICAgPHBhdGggZD0iTTIwIDIzOEM2MCAyMDggMTAwIDIwOCAxNDAgMjM4QzE4MCAyNjggMjIwIDI2OCAyNjAgMjM4QzMwMCAyMDggMzQwIDIwOCAzODAgMjM4QzQyMCAyNjggNDYwIDI2OCA1MDAgMjM4Ii8+CiAgPC9nPgogIDxjaXJjbGUgY3g9IjM5MiIgY3k9IjcwIiByPSI0NSIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1vcGFjaXR5PSIwLjM0Ii8+Cjwvc3ZnPgo=");
-}
-
-.tour-image.rajasthan {
-  background: linear-gradient(135deg, rgba(194, 65, 12, 0.78), rgba(126, 34, 206, 0.72)), url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjI4MCIgdmlld0JveD0iMCAwIDUwMCAyODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgZmlsbD0iI0ZGRkZGRiIgZmlsbC1vcGFjaXR5PSIwLjM4Ij4KICAgIDxwYXRoIGQ9Ik04MCAxOTBINDIwVjI1MEg4MFYxOTBaIi8+CiAgICA8cGF0aCBkPSJNMTIwIDEyMEgxOTBWMjUwSDEyMFYxMjBaIi8+CiAgICA8cGF0aCBkPSJNMzEwIDEyMEgzODBWMjUwSDMxMFYxMjBaIi8+CiAgICA8cGF0aCBkPSJNMjA1IDEwMEgyOTVWMjUwSDIwNVYxMDBaIi8+CiAgICA8cGF0aCBkPSJNMTE1IDEyMEMxMjQgNzggMTQ2IDU4IDE1NSA1OEMxNjQgNTggMTgyIDc4IDE5MSAxMjBIMTE1WiIvPgogICAgPHBhdGggZD0iTTMwNSAxMjBDMzE0IDc4IDMzNiA1OCAzNDUgNThDMzU0IDU4IDM3MiA3OCAzODEgMTIwSDMwNVoiLz4KICAgIDxwYXRoIGQ9Ik0xOTggMTAxQzIxMCA0OCAyMzkgMjQgMjUwIDI0QzI2MSAyNCAyOTAgNDggMzAyIDEwMUgxOThaIi8+CiAgPC9nPgo8L3N2Zz4K");
-}
-
-.tour-image.spiritual {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.78), rgba(236, 72, 153, 0.62)), url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjI4MCIgdmlld0JveD0iMCAwIDUwMCAyODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTI0IDIxNEM5NCAxNjAgMTU0IDI2MCAyMjQgMjA4QzI4OCAxNjAgMzI2IDEyMCAzOTIgMTUwQzQzMCAxNjcgNDUyIDIwMCA0OTIgMTc2IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS1vcGFjaXR5PSIwLjQ1IiBzdHJva2Utd2lkdGg9IjE2IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTMyIDEyOEgzMDAiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLW9wYWNpdHk9IjAuMzIiIHN0cm9rZS13aWR0aD0iMTQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xNzAgOTBIMzMwIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS1vcGFjaXR5PSIwLjMyIiBzdHJva2Utd2lkdGg9IjE0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI5OCIgY3k9Ijc0IiByPSIzOCIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1vcGFjaXR5PSIwLjI2Ii8+Cjwvc3ZnPgo=");
-}
-
-.tour-image.south {
-  background: linear-gradient(135deg, rgba(15, 118, 110, 0.8), rgba(234, 88, 12, 0.66)), url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjI4MCIgdmlld0JveD0iMCAwIDUwMCAyODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgZmlsbD0iI0ZGRkZGRiIgZmlsbC1vcGFjaXR5PSIwLjM4Ij4KICAgIDxyZWN0IHg9Ijk2IiB5PSIyMDIiIHdpZHRoPSIzMDgiIGhlaWdodD0iMzgiIHJ4PSI4Ii8+CiAgICA8cmVjdCB4PSIxMzIiIHk9IjE1NiIgd2lkdGg9IjIzNiIgaGVpZ2h0PSI1NCIgcng9IjgiLz4KICAgIDxyZWN0IHg9IjE2OCIgeT0iMTEyIiB3aWR0aD0iMTY0IiBoZWlnaHQ9IjUyIiByeD0iOCIvPgogICAgPHBhdGggZD0iTTI1MCAzNEwzNDIgMTE4SDE1OEwyNTAgMzRaIi8+CiAgICA8cmVjdCB4PSIyMzAiIHk9IjE1NiIgd2lkdGg9IjQyIiBoZWlnaHQ9Ijg0IiByeD0iMjAiIGZpbGwtb3BhY2l0eT0iMC41NSIvPgogIDwvZz4KPC9zdmc+Cg==");
-}
-
-.tour-content {
-  padding: 24px;
-}
-
-.pill {
-  display: inline-flex;
-  color: var(--blue);
-  background: #eff6ff;
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-weight: 800;
-  font-size: 0.78rem;
-  margin-bottom: 14px;
-}
-
-.tour-content a {
-  color: var(--orange);
-  font-weight: 900;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 0.86fr 1fr;
-  gap: 56px;
-  align-items: center;
-}
-
-.about-image {
-  background: linear-gradient(135deg, #eff6ff, #fff7ed);
-  border: 1px solid var(--border);
-  border-radius: 34px;
-  padding: 30px;
-  box-shadow: var(--shadow);
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-top: 28px;
-}
-
-.stats-grid div {
-  padding: 18px;
-  border-radius: 18px;
-  background: var(--soft);
-  border: 1px solid var(--border);
-}
-
-.stats-grid strong,
-.stats-grid span {
-  display: block;
-}
-
-.stats-grid strong {
-  color: var(--orange);
-  font-size: 1.25rem;
-}
-
-.stats-grid span {
-  color: var(--muted);
-  font-weight: 700;
-  font-size: 0.9rem;
-}
-
-.cta-section {
-  padding: 30px 0;
-}
-
-.cta-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
-  padding: 46px;
-  border-radius: 34px;
-  color: var(--white);
-  background: linear-gradient(135deg, var(--navy), var(--blue));
-  box-shadow: var(--shadow);
-}
-
-.cta-card h2 {
-  color: var(--white);
-  margin-bottom: 0;
-}
-
-.cta-card .eyebrow {
-  color: var(--gold);
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 0.78fr 1fr;
-  gap: 50px;
-}
-
-.contact-list {
-  display: grid;
-  gap: 12px;
-  margin-top: 28px;
-}
-
-.contact-list p {
-  margin: 0;
-  padding: 16px;
-  border-radius: 16px;
-  background: var(--soft);
-  border: 1px solid var(--border);
-}
-
-.contact-form {
-  padding: 30px;
-  display: grid;
-  gap: 18px;
-}
-
-.site-footer {
-  background: var(--navy);
-  color: var(--white);
-  padding: 56px 0 24px;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 0.7fr 0.7fr;
-  gap: 36px;
-}
-
-.footer-brand small,
-.footer-grid p {
-  color: #cbd5e1;
-}
-
-.footer-grid h3 {
-  color: var(--white);
-  margin-bottom: 14px;
-}
-
-.footer-grid a {
-  display: block;
-  color: #cbd5e1;
-  margin-bottom: 10px;
-}
-
-.footer-grid a:hover {
-  color: var(--gold);
-}
-
-.footer-bottom {
-  margin-top: 34px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.footer-bottom p {
-  margin: 0;
-}
-
-@media (max-width: 980px) {
-  .hero-grid,
-  .about-grid,
-  .contact-grid,
-  .split-heading {
-    grid-template-columns: 1fr;
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Son Travels &amp; Tours — India Journeys &amp; Worldwide Flights from Brisbane</title>
+<meta name="description" content="Son Travels & Tours Limited — Brisbane-based specialists in curated India tour packages and worldwide flight bookings. Golden Triangle, Kerala, Ladakh, Rajasthan and more." />
+<meta name="theme-color" content="#f5efe4" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@300;400;450;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f5efe4;
+    --paper-2:#ece4d3;
+    --paper-3:#e3d8c1;
+    --ink:#1a1410;
+    --ink-soft:#3a2f26;
+    --muted:#6b5d4f;
+    --terracotta:#c2410c;
+    --terracotta-2:#9a3309;
+    --gold:#b8893a;
+    --gold-2:#d4a960;
+    --night:#0e0a07;
+    --night-2:#1a120c;
+    --night-3:#241910;
+    --line:rgba(26,20,16,.14);
+    --line-soft:rgba(26,20,16,.07);
+    --shadow-soft:0 18px 40px -25px rgba(26,20,16,.5);
+    --shadow-deep:0 30px 60px -25px rgba(26,20,16,.45),0 8px 20px -10px rgba(26,20,16,.2);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter Tight', system-ui, sans-serif;
+    font-size:16px; line-height:1.55;
+    font-feature-settings:"ss01","cv11";
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  /* paper grain */
+  body::before{
+    content:""; position:fixed; inset:-2px; pointer-events:none; z-index:1;
+    opacity:.32; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1  0 0 0 0 0.08  0 0 0 0 0.06  0 0 0 0.16 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--terracotta);color:var(--paper)}
+
+  h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-0.025em;line-height:1.04;margin:0;color:var(--ink)}
+  .ital{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;letter-spacing:-0.005em}
+  .container{max-width:1280px;margin:0 auto;padding:0 36px;position:relative;z-index:2}
+  @media (max-width:900px){.container{padding:0 22px}}
+
+  .eyebrow{
+    font-family:'Inter Tight',sans-serif;
+    font-size:11px;font-weight:500;
+    letter-spacing:.24em;text-transform:uppercase;
+    color:var(--terracotta);
+    display:inline-flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{
+    content:""; width:22px; height:1px; background:var(--terracotta);
+  }
+  .eyebrow.dark{color:var(--gold)}
+  .eyebrow.dark::before{background:var(--gold)}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:13px 22px;border-radius:999px;
+    font-size:14px;font-weight:500;letter-spacing:.005em;
+    cursor:pointer;border:1px solid var(--ink);
+    transition:transform .25s ease,background .25s ease,color .25s ease,border-color .25s ease,box-shadow .25s ease;
+    font-family:'Inter Tight',sans-serif;
+  }
+  .btn .arr{display:inline-block;transition:transform .25s ease;font-family:'Fraunces',serif;font-style:italic;font-size:18px;line-height:1}
+  .btn:hover .arr{transform:translateX(4px)}
+  .btn-primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .btn-primary:hover{background:var(--terracotta);border-color:var(--terracotta);transform:translateY(-1px);box-shadow:0 14px 30px -12px rgba(194,65,12,.45)}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+  .btn-terra{background:var(--terracotta);color:#fff;border-color:var(--terracotta)}
+  .btn-terra:hover{background:var(--terracotta-2);border-color:var(--terracotta-2);transform:translateY(-1px);box-shadow:0 14px 30px -12px rgba(194,65,12,.55)}
+  .btn-paper{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+  .btn-paper:hover{background:var(--terracotta);color:#fff;border-color:var(--terracotta);transform:translateY(-1px)}
+
+  /* ---------- NAV ---------- */
+  nav.top{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    backdrop-filter:saturate(140%) blur(14px);
+    -webkit-backdrop-filter:saturate(140%) blur(14px);
+    background:rgba(245,239,228,.78);
+    border-bottom:1px solid var(--line-soft);
+  }
+  nav.top .inner{
+    max-width:1280px;margin:0 auto;padding:18px 36px;
+    display:flex;align-items:center;justify-content:space-between;gap:24px;
+  }
+  @media (max-width:900px){nav.top .inner{padding:14px 22px}}
+  .logo{display:flex;align-items:baseline;gap:10px;font-family:'Fraunces',serif;font-weight:600;font-size:22px;letter-spacing:-0.025em}
+  .logo .dot{width:9px;height:9px;border-radius:50%;background:var(--terracotta);transform:translateY(-2px);box-shadow:0 0 0 3px rgba(194,65,12,.18)}
+  .logo .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:15px;color:var(--muted)}
+  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-links a{font-size:14px;color:var(--ink-soft);transition:color .2s;position:relative}
+  .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--terracotta);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+  .nav-links a:not(.btn):hover{color:var(--terracotta)}
+  .nav-links a:not(.btn):hover::after{transform:scaleX(1)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  @media (max-width:900px){
+    .nav-links:not(.cta){display:none}
+    .nav-cta .text{display:none}
   }
 
-  .hero-card {
-    min-height: 430px;
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:170px 0 100px;overflow:hidden}
+  .hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}
+  @media (max-width:1000px){.hero{padding:130px 0 70px}.hero .grid{grid-template-columns:1fr;gap:60px}}
+
+  .hero h1{
+    font-size:clamp(56px,8.4vw,118px);
+    letter-spacing:-0.04em;line-height:.95;
+    margin-top:22px;
+  }
+  .hero h1 .ital{color:var(--terracotta);font-weight:500;font-size:.96em}
+  .hero p.lead{margin-top:32px;max-width:520px;font-size:19px;color:var(--ink-soft);line-height:1.55;font-weight:400}
+  .hero p.lead em{color:var(--ink);font-style:normal;font-weight:500}
+
+  .hero-ctas{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero-meta{
+    margin-top:54px;display:grid;grid-template-columns:repeat(3,auto);gap:48px;
+    border-top:1px solid var(--line);padding-top:24px;justify-content:start;
+  }
+  @media (max-width:600px){.hero-meta{grid-template-columns:1fr 1fr;gap:24px 36px}}
+  .hero-meta div{display:flex;flex-direction:column;gap:4px}
+  .hero-meta .num{font-family:'Fraunces',serif;font-size:32px;font-weight:500;letter-spacing:-0.025em;color:var(--ink)}
+  .hero-meta .lbl{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+  /* hero collage */
+  .hero-art{position:relative;height:600px}
+  @media (max-width:1000px){.hero-art{height:480px}}
+  @media (max-width:560px){.hero-art{height:420px}}
+  .frame{position:absolute;border-radius:6px;overflow:hidden;box-shadow:var(--shadow-deep)}
+  .frame img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+  .frame:hover img{transform:scale(1.04)}
+  .f1{top:0;right:0;width:78%;height:78%}
+  .f2{bottom:0;left:0;width:54%;height:48%;border:8px solid var(--paper)}
+  .f3{top:42%;left:6%;width:36%;height:30%;border:6px solid var(--paper);transform:rotate(-3deg)}
+  .stamp{
+    position:absolute;top:-6px;left:30%;z-index:3;
+    background:var(--terracotta);color:#fff;
+    font-family:'Inter Tight',sans-serif;font-size:11px;font-weight:500;
+    letter-spacing:.22em;text-transform:uppercase;
+    padding:9px 16px;border-radius:999px;transform:rotate(-4deg);
+    box-shadow:0 10px 22px -8px rgba(194,65,12,.6);
+  }
+  .seal{
+    position:absolute;bottom:-30px;right:-12px;z-index:3;
+    width:140px;height:140px;border-radius:50%;
+    background:var(--paper);
+    display:grid;place-items:center;
+    box-shadow:var(--shadow-soft);
+    transform:rotate(-8deg);
+  }
+  .seal svg{width:100%;height:100%;animation:spin 30s linear infinite}
+  .seal .core{
+    position:absolute;inset:0;display:grid;place-items:center;
+    font-family:'Fraunces',serif;font-style:italic;font-weight:500;
+    font-size:30px;color:var(--terracotta);
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media (max-width:560px){.seal{width:110px;height:110px;bottom:-22px;right:0}.seal .core{font-size:24px}}
+
+  .corner-mark{
+    position:absolute;right:36px;top:140px;
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    color:var(--muted);font-size:14px;letter-spacing:.04em;transform:rotate(2deg);
+  }
+  @media (max-width:1100px){.corner-mark{display:none}}
+
+  /* ---------- TRUST STRIP ---------- */
+  .trust{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:var(--paper-2);padding:24px 0;position:relative;z-index:2;
+  }
+  .trust .row{display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:center;color:var(--muted)}
+  .trust .row span{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.06em}
+  .trust .row b{color:var(--ink);font-weight:500;font-family:'Fraunces',serif;font-size:18px;letter-spacing:-0.01em;font-style:italic}
+  .trust .row .dot{width:4px;height:4px;border-radius:50%;background:var(--terracotta);opacity:.6}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{
+    background:var(--paper);
+    padding:30px 0 32px;overflow:hidden;position:relative;z-index:2;
+    border-bottom:1px solid var(--line);
+  }
+  .marquee::before,.marquee::after{
+    content:"";position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none;
+  }
+  .marquee::before{left:0;background:linear-gradient(90deg,var(--paper),transparent)}
+  .marquee::after{right:0;background:linear-gradient(-90deg,var(--paper),transparent)}
+  .marquee .track{
+    display:flex;gap:56px;white-space:nowrap;
+    animation:scroll 55s linear infinite;
+    font-family:'Fraunces',serif;font-size:34px;font-weight:400;letter-spacing:-0.015em;color:var(--ink);
+  }
+  .marquee .track span{display:inline-flex;align-items:center;gap:56px}
+  .marquee .track span::after{content:"✦";color:var(--terracotta);font-size:18px;font-family:sans-serif}
+  @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:120px 0;position:relative;z-index:2}
+  @media (max-width:900px){section{padding:80px 0}}
+  .section-head{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:end;margin-bottom:64px}
+  @media (max-width:900px){.section-head{grid-template-columns:1fr;gap:18px;margin-bottom:44px}}
+  .section-head h2{font-size:clamp(42px,5.4vw,76px);letter-spacing:-0.035em;line-height:.96}
+  .section-head h2 .ital{color:var(--terracotta)}
+  .section-head .sub{color:var(--muted);font-size:17px;max-width:540px;margin-left:auto;line-height:1.55}
+  @media (max-width:900px){.section-head .sub{margin-left:0}}
+
+  /* ---------- TOURS ---------- */
+  .tours-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px 30px}
+  @media (max-width:1100px){.tours-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:680px){.tours-grid{grid-template-columns:1fr;gap:50px}}
+  .tour{display:flex;flex-direction:column;gap:18px;cursor:pointer}
+  .tour .img{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:4px;box-shadow:var(--shadow-soft)}
+  .tour .img img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.6,.2,1)}
+  .tour:hover .img img{transform:scale(1.06)}
+  .tour .img::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 50%,rgba(14,10,7,.35) 100%);
+    pointer-events:none;
+  }
+  .tour .badge{
+    position:absolute;top:14px;left:14px;z-index:2;
+    background:var(--paper);color:var(--ink);
+    font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+    padding:8px 12px;border-radius:999px;
+  }
+  .tour .duration{
+    position:absolute;bottom:14px;right:14px;z-index:2;
+    background:rgba(14,10,7,.78);color:var(--paper);
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;font-weight:500;
+    padding:7px 14px;border-radius:999px;backdrop-filter:blur(6px);
+  }
+  .tour .meta{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+  .tour .route{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .tour .price{font-family:'Fraunces',serif;font-weight:500;font-size:24px;letter-spacing:-0.015em}
+  .tour .price small{font-family:'Inter Tight',sans-serif;font-weight:400;font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-left:6px}
+  .tour h3{font-size:30px;letter-spacing:-0.022em}
+  .tour p{font-size:15px;color:var(--ink-soft);line-height:1.55;margin:0}
+  .tour .more{margin-top:4px;font-size:13px;color:var(--terracotta);font-weight:500;display:inline-flex;align-items:center;gap:8px;letter-spacing:.04em}
+  .tour .more::after{content:"→";transition:transform .25s ease}
+  .tour:hover .more::after{transform:translateX(5px)}
+
+  /* ---------- PULL QUOTE ---------- */
+  .pullquote{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:80px 0;text-align:center;background:var(--paper-2);
+  }
+  .pullquote blockquote{
+    font-family:'Fraunces',serif;font-weight:400;
+    font-size:clamp(28px,3.4vw,42px);letter-spacing:-0.022em;line-height:1.18;
+    max-width:920px;margin:0 auto;color:var(--ink);
+  }
+  .pullquote blockquote .ital{color:var(--terracotta)}
+  .pullquote cite{
+    display:block;margin-top:24px;font-style:normal;
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);
   }
 
-  .booking-form {
-    grid-template-columns: repeat(2, 1fr);
+  /* ---------- FLIGHTS (dark) ---------- */
+  .flights{background:var(--night);color:var(--paper);overflow:hidden}
+  .flights::before{
+    content:"";position:absolute;inset:0;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.04 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    opacity:.7;pointer-events:none;
   }
-
-  .booking-form button {
-    grid-column: 1 / -1;
+  .flights::after{
+    content:"";position:absolute;top:-200px;right:-200px;width:600px;height:600px;
+    background:radial-gradient(circle,rgba(184,137,58,.12),transparent 60%);
+    pointer-events:none;
   }
+  .flights .section-head h2{color:var(--paper)}
+  .flights .section-head h2 .ital{color:var(--gold)}
+  .flights .section-head .sub{color:rgba(245,239,228,.62)}
 
-  .service-grid,
-  .tour-grid,
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .search{
+    background:var(--night-2);
+    border:1px solid rgba(245,239,228,.1);
+    border-radius:10px;padding:14px;
+    display:grid;grid-template-columns:1.3fr 1.3fr 1fr 1fr auto;gap:8px;
+    margin-bottom:50px;position:relative;
   }
-}
-
-@media (max-width: 760px) {
-  .section-padding {
-    padding: 70px 0;
+  @media (max-width:900px){.search{grid-template-columns:1fr 1fr;gap:10px}}
+  .search .field{
+    background:rgba(245,239,228,.04);
+    border:1px solid rgba(245,239,228,.07);
+    border-radius:7px;padding:14px 18px;
+    display:flex;flex-direction:column;gap:5px;transition:border-color .25s,background .25s;
   }
-
-  .nav-toggle {
-    display: block;
+  .search .field:focus-within{border-color:var(--gold);background:rgba(245,239,228,.06)}
+  .search label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,239,228,.55);font-weight:500}
+  .search input{
+    background:transparent;border:0;outline:0;color:var(--paper);
+    font-family:'Fraunces',serif;font-size:18px;font-weight:400;letter-spacing:-0.005em;
+    width:100%;padding:0;
   }
-
-  .nav-links {
-    position: absolute;
-    top: 78px;
-    left: 20px;
-    right: 20px;
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    padding: 16px;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    box-shadow: var(--shadow);
+  .search input::placeholder{color:rgba(245,239,228,.32)}
+  .search .go{
+    background:var(--gold);color:var(--night);border:none;border-radius:7px;
+    padding:0 28px;cursor:pointer;font-weight:600;letter-spacing:.04em;
+    font-family:'Inter Tight',sans-serif;font-size:14px;
+    display:inline-flex;align-items:center;gap:10px;
+    transition:background .25s,transform .25s,box-shadow .25s;
   }
+  .search .go:hover{background:var(--gold-2);transform:translateY(-1px);box-shadow:0 14px 30px -12px rgba(184,137,58,.55)}
+  .search .go .arr{font-family:'Fraunces',serif;font-style:italic;font-size:18px}
+  @media (max-width:900px){.search .go{grid-column:span 2;padding:18px}}
 
-  .nav-links.open {
-    display: flex;
+  .flight-meta{
+    display:flex;justify-content:space-between;align-items:baseline;
+    margin-bottom:14px;flex-wrap:wrap;gap:16px;
   }
+  .flight-meta .label{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(245,239,228,.6);font-size:18px}
+  .flight-meta .legend{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,239,228,.45)}
 
-  .nav-links a {
-    padding: 14px;
+  .destinations{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+    background:rgba(245,239,228,.07);
+    border:1px solid rgba(245,239,228,.07);border-radius:6px;overflow:hidden;
   }
-
-  .nav-cta {
-    text-align: center;
+  @media (max-width:1000px){.destinations{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:540px){.destinations{grid-template-columns:1fr}}
+  .dest{
+    background:var(--night);padding:28px 26px;min-height:178px;
+    display:flex;justify-content:space-between;align-items:flex-end;
+    cursor:pointer;transition:background .25s;position:relative;overflow:hidden;
   }
-
-  .hero {
-    padding-top: 50px;
+  .dest::before{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
+    background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s ease;
   }
+  .dest:hover{background:var(--night-2)}
+  .dest:hover::before{transform:scaleX(1)}
+  .dest .left{display:flex;flex-direction:column;gap:6px}
+  .dest .city{font-family:'Fraunces',serif;font-size:32px;font-weight:500;letter-spacing:-0.025em;color:var(--paper);line-height:.95}
+  .dest .country{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:rgba(245,239,228,.6)}
+  .dest .right{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+  .dest .from{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,239,228,.5)}
+  .dest .price{font-family:'Fraunces',serif;font-size:24px;color:var(--gold);font-weight:500;letter-spacing:-0.018em}
+  .dest .price small{font-family:'Inter Tight',sans-serif;font-size:10px;color:rgba(245,239,228,.4);letter-spacing:.1em;font-weight:400;margin-left:4px;text-transform:uppercase}
 
-  .hero-card {
-    min-height: 370px;
-    border-radius: 28px;
+  /* ---------- WHY ---------- */
+  .why{background:var(--paper-2)}
+  .why .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:50px}
+  @media (max-width:900px){.why .why-grid{grid-template-columns:1fr;gap:38px}}
+  .why .item{display:flex;flex-direction:column;gap:18px;border-top:1px solid var(--ink);padding-top:30px;position:relative}
+  .why .item .num{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    color:var(--terracotta);font-size:42px;font-weight:500;line-height:1;
   }
+  .why .item h3{font-size:30px;letter-spacing:-0.022em}
+  .why .item p{color:var(--ink-soft);font-size:16px;line-height:1.6;margin:0}
 
-  .floating-card {
-    position: static;
-    margin: 8px;
+  /* ---------- TESTIMONIAL ---------- */
+  .testi{padding:120px 0;background:var(--paper);position:relative}
+  @media (max-width:900px){.testi{padding:80px 0}}
+  .testi .grid{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;align-items:center}
+  @media (max-width:900px){.testi .grid{grid-template-columns:1fr;gap:36px}}
+  .testi .photo{position:relative;aspect-ratio:4/5;border-radius:4px;overflow:hidden;box-shadow:var(--shadow-deep);max-width:420px}
+  .testi .photo img{width:100%;height:100%;object-fit:cover}
+  .testi .photo::after{
+    content:'"';position:absolute;top:-30px;left:-10px;
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+    font-size:200px;color:var(--terracotta);line-height:1;
   }
-
-  .booking-strip {
-    margin-top: 0;
+  .testi blockquote{
+    font-family:'Fraunces',serif;font-weight:400;
+    font-size:clamp(24px,2.6vw,32px);letter-spacing:-0.018em;line-height:1.3;
+    margin:0;color:var(--ink);
   }
+  .testi blockquote .ital{color:var(--terracotta)}
+  .testi cite{display:block;margin-top:24px;font-style:normal;font-size:13px;letter-spacing:.04em;color:var(--muted)}
+  .testi cite b{color:var(--ink);font-weight:500}
 
-  .booking-panel,
-  .contact-form,
-  .cta-card {
-    padding: 24px;
+  /* ---------- CTA BAND ---------- */
+  .cta-band{
+    padding:130px 0;text-align:center;
+    background:radial-gradient(ellipse at center top,rgba(194,65,12,.12),transparent 60%),var(--paper);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   }
-
-  .booking-form,
-  .service-grid,
-  .tour-grid,
-  .stats-grid,
-  .footer-grid {
-    grid-template-columns: 1fr;
+  .cta-band h2{font-size:clamp(46px,6.4vw,86px);letter-spacing:-0.035em;line-height:.98;max-width:920px;margin:18px auto 0}
+  .cta-band h2 .ital{color:var(--terracotta)}
+  .cta-band p{margin:26px auto 38px;color:var(--ink-soft);max-width:560px;font-size:18px}
+  .cta-band .actions{display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .cta-band .email-line{
+    margin-top:30px;font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:22px;color:var(--terracotta);
   }
+  .cta-band .email-line a{border-bottom:1px solid currentColor;padding-bottom:2px;transition:opacity .2s}
+  .cta-band .email-line a:hover{opacity:.7}
 
-  .cta-card {
-    align-items: flex-start;
-    flex-direction: column;
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:var(--paper);padding:90px 0 30px;position:relative;z-index:2}
+  footer .grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1.2fr;gap:54px;padding-bottom:54px;border-bottom:1px solid rgba(245,239,228,.12)}
+  @media (max-width:900px){footer .grid{grid-template-columns:1fr 1fr;gap:40px}}
+  @media (max-width:540px){footer .grid{grid-template-columns:1fr}}
+  footer h4{font-family:'Inter Tight',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,239,228,.5);margin-bottom:20px;font-weight:500}
+  footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px}
+  footer ul a{color:rgba(245,239,228,.85);font-size:15px;transition:color .2s}
+  footer ul a:hover{color:var(--gold)}
+  footer .brand .logo{color:var(--paper);font-size:26px;margin-bottom:14px}
+  footer .brand .logo .sub{color:rgba(245,239,228,.55)}
+  footer .brand p{color:rgba(245,239,228,.7);font-size:15px;line-height:1.6;max-width:340px;margin:0 0 22px}
+  footer .news{display:flex;gap:8px;max-width:340px;margin-top:8px}
+  footer .news input{
+    flex:1;background:rgba(245,239,228,.06);border:1px solid rgba(245,239,228,.12);
+    border-radius:999px;padding:11px 16px;color:var(--paper);font-family:inherit;font-size:14px;outline:0;
+    transition:border-color .2s,background .2s;
   }
-}
-
+  footer .news input::placeholder{color:rgba(245,239,228,.4)}
+  footer .news input:focus{border-color:var(--gold);background:rgba(245,239,228,.09)}
+  footer .news button{
+    background:var(--gold);color:var(--ink);border:0;border-radius:999px;
+    padding:0 18px;font-weight:600;cursor:pointer;font-family:inherit;font-size:14px;
+    transition:background .2s,transform .2s;
+  }
+  footer .news button:hover{background:var(--gold-2);transform:translateY(-1px)}
+  footer .contact a{display:block;color:var(--paper);font-size:15px;margin-bottom:8px;transition:color .2s}
+  footer .contact a:hover{color:var(--gold)}
+  footer .contact .small{font-size:13px;color:rgba(245,239,228,.5);line-height:1.5;margin-top:6px}
+  footer .bottom{padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;color:rgba(245,239,228,.5);font-size:13px;align-items:center}
+  footer .bottom .legal{display:flex;gap:24px}
+  footer .bottom .legal a:hover{color:var(--gold)}
+  footer .bottom .made{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:rgba(245,239,228,.6)}
+  footer .bottom .made b{color:var(--paper);font-weight:500}
 </style>
-<!-- Single-file visible preview generated for easy opening. -->
 </head>
 <body>
-  <header class="site-header" id="top">
-    <nav class="navbar" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="Son Travels & Tours Limited home">
-        <span class="brand-mark">ST</span>
-        <span>
-          <strong>Son Travels</strong>
-          <small>& Tours Limited</small>
-        </span>
-      </a>
 
-      <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+<nav class="top">
+  <div class="inner">
+    <a href="#top" class="logo" aria-label="Son Travels & Tours home">
+      <span class="dot" aria-hidden="true"></span>Son Travels<span class="sub">&amp; Tours</span>
+    </a>
+    <div class="nav-links">
+      <a href="#tours">India Tours</a>
+      <a href="#flights">Flights</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-terra"><span class="text">Plan a journey</span><span class="arr">→</span></a>
+    </div>
+  </div>
+</nav>
 
-      <div class="nav-links">
-        <a href="#tours">India Tours</a>
-        <a href="#flights">Flights</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-cta" href="#contact">Book Now</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero section-padding">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">India tour packages • Worldwide flight tickets</p>
-          <h1>Explore India. Fly anywhere in the world.</h1>
-          <p class="hero-text">
-            Son Travels & Tours Limited helps travelers discover India’s culture, heritage, beaches, food, and spiritual destinations while also arranging reliable flight tickets to destinations worldwide.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#tours">View India Tours</a>
-            <a class="button secondary" href="#flights">Book a Flight</a>
-          </div>
-          <div class="trust-row" aria-label="Service highlights">
-            <span>Custom itineraries</span>
-            <span>Group & family tours</span>
-            <span>Worldwide tickets</span>
-          </div>
+<header class="hero" id="top">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <span class="eyebrow">Brisbane &middot; Est. 2014</span>
+        <h1>A slower way<br/>to see <span class="ital">India.</span><br/>A sharper way<br/>to fly the <span class="ital">world.</span></h1>
+        <p class="lead">Son Travels &amp; Tours Limited curates <em>unhurried India journeys</em> and books worldwide flights for travellers who'd rather have a person on the other end of the line. Local knowledge, fair fares, no algorithm hiding the good seats.</p>
+        <div class="hero-ctas">
+          <a href="#tours" class="btn btn-primary">Browse India tours <span class="arr">→</span></a>
+          <a href="#flights" class="btn btn-ghost">Search flights</a>
         </div>
-
-        <div class="hero-card" aria-label="India travel illustration">
-          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjgwIiBoZWlnaHQ9IjU2MCIgdmlld0JveD0iMCAwIDY4MCA1NjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPkluZGlhIHRyYXZlbCBpbGx1c3RyYXRpb248L3RpdGxlPgogIDxkZXNjIGlkPSJkZXNjIj5BIHBsYW5lIGZseWluZyBvdmVyIHN0eWxpemVkIEluZGlhbiBsYW5kbWFya3MgYW5kIHRyYXZlbCByb3V0ZSBsaW5lcy48L2Rlc2M+CiAgPHJlY3Qgd2lkdGg9IjY4MCIgaGVpZ2h0PSI1NjAiIHJ4PSIzNiIgZmlsbD0iI0ZGRjdFRCIvPgogIDxjaXJjbGUgY3g9IjE3MCIgY3k9IjEzMCIgcj0iODYiIGZpbGw9IiNGOTczMTYiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxjaXJjbGUgY3g9IjU0MCIgY3k9IjkwIiByPSIxMTAiIGZpbGw9IiMxQjREODkiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxwYXRoIGQ9Ik05MiA0MjRDMTY0IDM2MCAyMTcgMzU2IDI4MCAzOTRDMzQ2IDQzNCAzOTkgNDI3IDQ2MCAzODJDNTA3IDM0NyA1NTYgMzI2IDYxNiAzNTQiIHN0cm9rZT0iIzFCNEQ4OSIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9IjIgMjAiLz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3MiAxODgpIj4KICAgIDxyZWN0IHg9IjM2IiB5PSIxMzgiIHdpZHRoPSIxNjgiIGhlaWdodD0iNzIiIHJ4PSIxMCIgZmlsbD0iIzBEMUIyQSIvPgogICAgPHJlY3QgeD0iNTgiIHk9IjkyIiB3aWR0aD0iMTI0IiBoZWlnaHQ9Ijc4IiByeD0iMTIiIGZpbGw9IiNGNUI5NDIiLz4KICAgIDxwYXRoIGQ9Ik00NyA5M0M1OCA0MiA4OCAxOCAxMjAgMThDMTUyIDE4IDE4MiA0MiAxOTMgOTNINDdaIiBmaWxsPSIjRjk3MzE2Ii8+CiAgICA8cGF0aCBkPSJNODEgOTJDODkgNjAgMTAyIDQ0IDEyMCA0NEMxMzggNDQgMTUxIDYwIDE1OSA5Mkg4MVoiIGZpbGw9IiNGRkY3RUQiLz4KICAgIDxyZWN0IHg9Ijg4IiB5PSIxMzgiIHdpZHRoPSIzNCIgaGVpZ2h0PSI3MiIgcng9IjE3IiBmaWxsPSIjRkZGN0VEIi8+CiAgICA8cmVjdCB4PSIxMzYiIHk9IjEzOCIgd2lkdGg9IjM0IiBoZWlnaHQ9IjcyIiByeD0iMTciIGZpbGw9IiNGRkY3RUQiLz4KICAgIDxyZWN0IHk9IjE5MCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSIyNCIgcng9IjEyIiBmaWxsPSIjMUI0RDg5Ii8+CiAgPC9nPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM5MCAyMTQpIj4KICAgIDxyZWN0IHg9IjE4IiB5PSIxMjQiIHdpZHRoPSIxNzAiIGhlaWdodD0iNzAiIHJ4PSIxMCIgZmlsbD0iIzBEMUIyQSIvPgogICAgPHJlY3QgeD0iNDIiIHk9IjcwIiB3aWR0aD0iMTIyIiBoZWlnaHQ9Ijc2IiByeD0iMTAiIGZpbGw9IiMxQjREODkiLz4KICAgIDxwYXRoIGQ9Ik0xMDMgMEwxOTIgNzJIMTRMMTAzIDBaIiBmaWxsPSIjRjk3MzE2Ii8+CiAgICA8cmVjdCB4PSI3NiIgeT0iMTI0IiB3aWR0aD0iNDQiIGhlaWdodD0iNzAiIHJ4PSIyMiIgZmlsbD0iI0ZGRjdFRCIvPgogICAgPHJlY3QgeD0iMCIgeT0iMTg0IiB3aWR0aD0iMjEwIiBoZWlnaHQ9IjI0IiByeD0iMTIiIGZpbGw9IiNGNUI5NDIiLz4KICA8L2c+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzc4IDkyKSByb3RhdGUoLTgpIj4KICAgIDxwYXRoIGQ9Ik0xNyA0OEwyNDMgMEMyNTMgLTIgMjU5IDExIDI1MCAxN0wxNTAgODJMMTcwIDE1NEMxNzIgMTYyIDE2MiAxNjggMTU2IDE2MkwxMTEgMTE0TDU1IDE1M0M0NyAxNTkgMzYgMTUxIDQxIDE0MUw2OSA5MkwxNCA2NUM1IDYxIDcgNTAgMTcgNDhaIiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMwRDFCMkEiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgPHBhdGggZD0iTTExMiAxMTNMMTQ5IDgyIiBzdHJva2U9IiNGOTczMTYiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPC9nPgogIDxwYXRoIGQ9Ik0xMTggNDc2SDU4NSIgc3Ryb2tlPSIjRTJFOEYwIiBzdHJva2Utd2lkdGg9IjE0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTY0IDQ3NkgyODYiIHN0cm9rZT0iI0Y5NzMxNiIgc3Ryb2tlLXdpZHRoPSIxNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBhdGggZD0iTTM5MiA0NzZINTAwIiBzdHJva2U9IiMxQjREODkiIHN0cm9rZS13aWR0aD0iMTQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" alt="Illustration of a plane flying over Indian landmarks" />
-          <div class="floating-card top-card">
-            <span class="mini-label">Popular route</span>
-            <strong>Delhi • Agra • Jaipur</strong>
-          </div>
-          <div class="floating-card bottom-card">
-            <span class="mini-label">Ticketing</span>
-            <strong>Flights worldwide</strong>
-          </div>
+        <div class="hero-meta">
+          <div><span class="num">11+</span><span class="lbl">Years operating</span></div>
+          <div><span class="num">42</span><span class="lbl">Indian states &amp; UTs</span></div>
+          <div><span class="num">4.9</span><span class="lbl">Avg. traveller rating</span></div>
         </div>
       </div>
-    </section>
-
-    <section class="booking-strip" id="flights" aria-labelledby="flight-title">
-      <div class="container">
-        <div class="booking-panel">
-          <div>
-            <p class="eyebrow">Flight ticket request</p>
-            <h2 id="flight-title">Tell us where you want to fly</h2>
-          </div>
-          <form class="booking-form" id="flightForm">
-            <label>
-              From
-              <input type="text" name="from" placeholder="City or airport" required />
-            </label>
-            <label>
-              To
-              <input type="text" name="to" placeholder="Destination" required />
-            </label>
-            <label>
-              Travel date
-              <input type="date" name="date" required />
-            </label>
-            <label>
-              Travelers
-              <select name="travellers">
-                <option>1 traveler</option>
-                <option>2 travelers</option>
-                <option>3 travelers</option>
-                <option>4+ travelers</option>
-              </select>
-            </label>
-            <button class="button primary" type="submit">Request Ticket Quote</button>
-          </form>
-          <p class="form-note" id="flightFormMessage" role="status"></p>
+      <div class="hero-art">
+        <div class="stamp">India · 2026 Departures Open</div>
+        <div class="frame f1"><img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1100&q=85&auto=format&fit=crop" alt="Taj Mahal at golden hour" loading="eager"/></div>
+        <div class="frame f2"><img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=900&q=85&auto=format&fit=crop" alt="Kerala backwaters houseboat" loading="eager"/></div>
+        <div class="frame f3"><img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=600&q=85&auto=format&fit=crop" alt="Rajasthan colour" loading="lazy"/></div>
+        <div class="seal" aria-hidden="true">
+          <svg viewBox="0 0 100 100">
+            <defs>
+              <path id="circ" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"/>
+            </defs>
+            <text font-family="Inter Tight,sans-serif" font-size="9" letter-spacing="2.2" fill="#1a1410">
+              <textPath href="#circ" startOffset="0">SON TRAVELS · BRISBANE · IATA · SINCE 2014 · </textPath>
+            </text>
+          </svg>
+          <span class="core">S<span style="font-size:.5em;vertical-align:super">★</span></span>
         </div>
       </div>
-    </section>
+    </div>
+    <div class="corner-mark">No. 01 — Issue · 2026</div>
+  </div>
+</header>
 
-    <section class="section-padding" id="services">
-      <div class="container">
-        <div class="section-heading narrow">
-          <p class="eyebrow">Our services</p>
-          <h2>Travel support from planning to departure</h2>
-          <p>Choose a ready-made India tour, request a custom itinerary, or ask our team to help you find suitable flights for your journey.</p>
-        </div>
+<div class="trust">
+  <div class="container">
+    <div class="row">
+      <span><b>IATA</b> Accredited</span>
+      <span class="dot"></span>
+      <span>Featured in <b>Vogue&nbsp;India</b></span>
+      <span class="dot"></span>
+      <span><b>Condé&nbsp;Nast</b> Recommended</span>
+      <span class="dot"></span>
+      <span>4.9★ across <b>312</b> reviews</span>
+      <span class="dot"></span>
+      <span><b>ATAS</b> Accredited Travel Agency</span>
+    </div>
+  </div>
+</div>
 
-        <div class="service-grid">
-          <article class="service-card">
-            <div class="icon-box">01</div>
-            <h3>India Tour Packages</h3>
-            <p>Guided and custom tour plans across Delhi, Agra, Jaipur, Kerala, Goa, Mumbai, Rajasthan, Varanasi, and more.</p>
-          </article>
-          <article class="service-card">
-            <div class="icon-box">02</div>
-            <h3>Worldwide Flight Tickets</h3>
-            <p>Flight ticket assistance for business trips, holidays, family travel, and international connections.</p>
-          </article>
-          <article class="service-card">
-            <div class="icon-box">03</div>
-            <h3>Group & Family Travel</h3>
-            <p>Flexible arrangements for couples, families, students, corporate groups, and special interest tours.</p>
-          </article>
-        </div>
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Jaipur</span><span>Varanasi</span><span>Kerala</span><span>Ladakh</span><span>Udaipur</span><span>Rishikesh</span><span>Goa</span><span>Hampi</span><span>Darjeeling</span><span>Agra</span>
+    <span>Jaipur</span><span>Varanasi</span><span>Kerala</span><span>Ladakh</span><span>Udaipur</span><span>Rishikesh</span><span>Goa</span><span>Hampi</span><span>Darjeeling</span><span>Agra</span>
+  </div>
+</div>
+
+<section id="tours">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">India Tours</span>
+        <h2 style="margin-top:14px">Six journeys,<br/><span class="ital">handpicked.</span></h2>
       </div>
-    </section>
+      <p class="sub">Each itinerary below is run with vetted ground partners we've worked with for years. Small groups, real hotels, drivers who actually know where they're going. Custom departures available on request.</p>
+    </div>
 
-    <section class="section-padding muted" id="tours">
-      <div class="container">
-        <div class="section-heading split-heading">
-          <div>
-            <p class="eyebrow">Featured India tours</p>
-            <h2>Discover India with carefully planned experiences</h2>
-          </div>
-          <p>These sample packages can be customized by travel date, budget, hotel preference, group size, and pace.</p>
+    <div class="tours-grid">
+      <article class="tour">
+        <div class="img">
+          <span class="badge">Bestseller</span>
+          <span class="duration">8 days</span>
+          <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=900&q=85&auto=format&fit=crop" alt="Taj Mahal" loading="lazy"/>
         </div>
+        <div class="meta"><span class="route">Delhi · Agra · Jaipur</span><span class="price">$2,490 <small>AUD</small></span></div>
+        <h3>The Golden Triangle</h3>
+        <p>The classic introduction to North India — Mughal forts, the Taj at sunrise, and the painted havelis of Jaipur. Done at a civilised pace, not the three-day blitz.</p>
+        <a href="#contact" class="more">Itinerary &amp; dates</a>
+      </article>
 
-        <div class="tour-grid">
-          <article class="tour-card">
-            <div class="tour-image golden"></div>
-            <div class="tour-content">
-              <span class="pill">5–7 days</span>
-              <h3>Golden Triangle Tour</h3>
-              <p>Delhi, Agra, and Jaipur with heritage sites, markets, forts, palaces, and the Taj Mahal.</p>
-              <a href="#contact">Request this tour</a>
-            </div>
-          </article>
-
-          <article class="tour-card">
-            <div class="tour-image kerala"></div>
-            <div class="tour-content">
-              <span class="pill">6–8 days</span>
-              <h3>Kerala Backwaters Escape</h3>
-              <p>Relax with lush landscapes, houseboat experiences, hill stations, and coastal culture.</p>
-              <a href="#contact">Request this tour</a>
-            </div>
-          </article>
-
-          <article class="tour-card">
-            <div class="tour-image goa"></div>
-            <div class="tour-content">
-              <span class="pill">4–6 days</span>
-              <h3>Goa & Mumbai Holiday</h3>
-              <p>Combine beaches, city life, nightlife, cuisine, shopping, and memorable coastal views.</p>
-              <a href="#contact">Request this tour</a>
-            </div>
-          </article>
-
-          <article class="tour-card">
-            <div class="tour-image rajasthan"></div>
-            <div class="tour-content">
-              <span class="pill">7–10 days</span>
-              <h3>Rajasthan Heritage Journey</h3>
-              <p>Explore Jaipur, Jodhpur, Udaipur, desert landscapes, royal architecture, and local traditions.</p>
-              <a href="#contact">Request this tour</a>
-            </div>
-          </article>
-
-          <article class="tour-card">
-            <div class="tour-image spiritual"></div>
-            <div class="tour-content">
-              <span class="pill">5–9 days</span>
-              <h3>Spiritual North India</h3>
-              <p>Visit Varanasi, Rishikesh, Haridwar, and sacred river experiences with peaceful itineraries.</p>
-              <a href="#contact">Request this tour</a>
-            </div>
-          </article>
-
-          <article class="tour-card">
-            <div class="tour-image south"></div>
-            <div class="tour-content">
-              <span class="pill">7–12 days</span>
-              <h3>South India Discovery</h3>
-              <p>Temples, beaches, hill stations, cultural cities, and food experiences across southern India.</p>
-              <a href="#contact">Request this tour</a>
-            </div>
-          </article>
+      <article class="tour">
+        <div class="img">
+          <span class="badge">Slow Travel</span>
+          <span class="duration">10 days</span>
+          <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=900&q=85&auto=format&fit=crop" alt="Kerala backwaters" loading="lazy"/>
         </div>
+        <div class="meta"><span class="route">Kochi · Munnar · Alleppey</span><span class="price">$2,990 <small>AUD</small></span></div>
+        <h3>Kerala Backwaters</h3>
+        <p>Tea hills, spice plantations and a private houseboat through the palm-lined canals of Alleppey. Ayurvedic afternoons in Varkala. Fish curry every night.</p>
+        <a href="#contact" class="more">Itinerary &amp; dates</a>
+      </article>
+
+      <article class="tour">
+        <div class="img">
+          <span class="badge">High Altitude</span>
+          <span class="duration">12 days</span>
+          <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=900&q=85&auto=format&fit=crop" alt="Ladakh monastery" loading="lazy"/>
+        </div>
+        <div class="meta"><span class="route">Leh · Nubra · Pangong</span><span class="price">$3,690 <small>AUD</small></span></div>
+        <h3>Ladakh &amp; the Himalaya</h3>
+        <p>Buddhist monasteries on the rooftop of the world. The Nubra Valley by 4WD, two nights at Pangong Tso, and acclimatisation done properly. June–September only.</p>
+        <a href="#contact" class="more">Itinerary &amp; dates</a>
+      </article>
+
+      <article class="tour">
+        <div class="img">
+          <span class="badge">Spiritual</span>
+          <span class="duration">7 days</span>
+          <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=900&q=85&auto=format&fit=crop" alt="Varanasi ghats" loading="lazy"/>
+        </div>
+        <div class="meta"><span class="route">Varanasi · Sarnath · Bodh Gaya</span><span class="price">$2,190 <small>AUD</small></span></div>
+        <h3>Varanasi &amp; the Ganges</h3>
+        <p>Dawn boat over the burning ghats. Ganga Aarti from a private platform. The Buddha's first sermon at Sarnath. India's oldest living city, witnessed properly.</p>
+        <a href="#contact" class="more">Itinerary &amp; dates</a>
+      </article>
+
+      <article class="tour">
+        <div class="img">
+          <span class="badge">Wildlife</span>
+          <span class="duration">9 days</span>
+          <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?w=900&q=85&auto=format&fit=crop" alt="Bengal tiger in jungle" loading="lazy"/>
+        </div>
+        <div class="meta"><span class="route">Ranthambore · Bandhavgarh · Kanha</span><span class="price">$3,290 <small>AUD</small></span></div>
+        <h3>Tiger Safari</h3>
+        <p>Three of India's best tiger reserves with naturalist-led jeep safaris twice daily. Forest lodges that don't pretend to be five-stars but get the things that matter right.</p>
+        <a href="#contact" class="more">Itinerary &amp; dates</a>
+      </article>
+
+      <article class="tour">
+        <div class="img">
+          <span class="badge">Heritage</span>
+          <span class="duration">11 days</span>
+          <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=900&q=85&auto=format&fit=crop" alt="Rajasthan palace" loading="lazy"/>
+        </div>
+        <div class="meta"><span class="route">Udaipur · Jodhpur · Jaisalmer</span><span class="price">$3,490 <small>AUD</small></span></div>
+        <h3>Royal Rajasthan</h3>
+        <p>Lake palaces, the blue city of Jodhpur, and a camel night under the Thar Desert sky. Heritage hotels that were proper palaces — not the ones pretending.</p>
+        <a href="#contact" class="more">Itinerary &amp; dates</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="pullquote">
+  <div class="container">
+    <blockquote>
+      "We don't sell India by the kilometre. We sell <span class="ital">mornings on the Ganges,</span> camel rides through the Thar, and the kind of meal you keep talking about <span class="ital">six months later.</span>"
+    </blockquote>
+    <cite>— Anil Menon, Founder</cite>
+  </div>
+</div>
+
+<section class="flights" id="flights">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow dark">Worldwide Flights</span>
+        <h2 style="margin-top:14px">Better fares,<br/><span class="ital">spoken to a human.</span></h2>
       </div>
-    </section>
+      <p class="sub">We hold consolidator agreements with major carriers out of Brisbane and Sydney. Tell us where you want to go and we'll come back with options the booking sites don't surface — multi-city, stopover, and student fares included.</p>
+    </div>
 
-    <section class="section-padding" id="about">
-      <div class="container about-grid">
-        <div class="about-image">
-          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDU2MCA0NTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPlRyYXZlbCBzdXBwb3J0IGlsbHVzdHJhdGlvbjwvdGl0bGU+CiAgPGRlc2MgaWQ9ImRlc2MiPkEgY29uc3VsdGFudCBkZXNrIHdpdGggcGFzc3BvcnQsIHRpY2tldCwgZ2xvYmUsIGFuZCBzdWl0Y2FzZSBpY29ucy48L2Rlc2M+CiAgPHJlY3Qgd2lkdGg9IjU2MCIgaGVpZ2h0PSI0NTAiIHJ4PSIzMiIgZmlsbD0iI0ZGRkZGRiIvPgogIDxjaXJjbGUgY3g9IjEyMiIgY3k9Ijk2IiByPSI3MCIgZmlsbD0iI0Y5NzMxNiIgZmlsbC1vcGFjaXR5PSIwLjEzIi8+CiAgPGNpcmNsZSBjeD0iNDMwIiBjeT0iMTEyIiByPSI4OCIgZmlsbD0iIzFCNEQ4OSIgZmlsbC1vcGFjaXR5PSIwLjEwIi8+CiAgPHJlY3QgeD0iOTIiIHk9IjI4MCIgd2lkdGg9IjM2NSIgaGVpZ2h0PSI0MiIgcng9IjIxIiBmaWxsPSIjMEQxQjJBIi8+CiAgPHJlY3QgeD0iMTI4IiB5PSIxMzIiIHdpZHRoPSIxOTAiIGhlaWdodD0iMjQ4IiByeD0iMjQiIGZpbGw9IiNGRkY3RUQiIHN0cm9rZT0iI0UyRThGMCIgc3Ryb2tlLXdpZHRoPSI4Ii8+CiAgPHJlY3QgeD0iMTU4IiB5PSIxNjYiIHdpZHRoPSIxMzAiIGhlaWdodD0iMTgiIHJ4PSI5IiBmaWxsPSIjRjk3MzE2Ii8+CiAgPHJlY3QgeD0iMTU4IiB5PSIyMDYiIHdpZHRoPSI4OCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiM5NEEzQjgiLz4KICA8cmVjdCB4PSIxNTgiIHk9IjIzNiIgd2lkdGg9IjExOCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiNDQkQ1RTEiLz4KICA8cmVjdCB4PSIxNTgiIHk9IjI2NiIgd2lkdGg9IjEwNCIgaGVpZ2h0PSIxNCIgcng9IjciIGZpbGw9IiNDQkQ1RTEiLz4KICA8cGF0aCBkPSJNMzUyIDEzMEM0MDIgMTMwIDQ0MiAxNzAgNDQyIDIyMEM0NDIgMjcwIDQwMiAzMTAgMzUyIDMxMEMzMDIgMzEwIDI2MiAyNzAgMjYyIDIyMEMyNjIgMTcwIDMwMiAxMzAgMzUyIDEzMFoiIGZpbGw9IiNFRkY2RkYiIHN0cm9rZT0iIzFCNEQ4OSIgc3Ryb2tlLXdpZHRoPSI4Ii8+CiAgPHBhdGggZD0iTTI2MiAyMjBINDQyTTM1MiAxMzBDMzc2IDE1NCAzODggMTg0IDM4OCAyMjBDMzg4IDI1NiAzNzYgMjg2IDM1MiAzMTBNMzUyIDEzMEMzMjggMTU0IDMxNiAxODQgMzE2IDIyMEMzMTYgMjU2IDMyOCAyODYgMzUyIDMxMCIgc3Ryb2tlPSIjMUI0RDg5IiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxyZWN0IHg9IjM1NiIgeT0iMjk2IiB3aWR0aD0iODgiIGhlaWdodD0iNzgiIHJ4PSIxNiIgZmlsbD0iI0Y1Qjk0MiIgc3Ryb2tlPSIjMEQxQjJBIiBzdHJva2Utd2lkdGg9IjgiLz4KICA8cGF0aCBkPSJNMzgyIDI5NlYyNzhDMzgyIDI2NiAzOTIgMjU2IDQwMCAyNTZDNDA4IDI1NiA0MTggMjY2IDQxOCAyNzhWMjk2IiBzdHJva2U9IiMwRDFCMkEiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBhdGggZD0iTTgyIDM0NEg0ODIiIHN0cm9rZT0iI0NCRDVFMSIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=" alt="Travel consultant helping a customer plan a journey" />
-        </div>
-        <div>
-          <p class="eyebrow">About Son Travels</p>
-          <h2>Your partner for India tours and global flight bookings</h2>
-          <p>
-            Son Travels & Tours Limited is built for travelers who want clear planning, helpful guidance, and flexible options. Whether you are visiting India for culture, family, business, leisure, or spiritual travel, our team can help shape the journey around your needs.
-          </p>
-          <div class="stats-grid">
-            <div>
-              <strong>India</strong>
-              <span>Tour planning focus</span>
-            </div>
-            <div>
-              <strong>Worldwide</strong>
-              <span>Flight ticket support</span>
-            </div>
-            <div>
-              <strong>Flexible</strong>
-              <span>Custom travel options</span>
-            </div>
-          </div>
-        </div>
+    <form class="search" onsubmit="event.preventDefault(); document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
+      <div class="field"><label>From</label><input type="text" placeholder="Brisbane (BNE)" value="Brisbane (BNE)"/></div>
+      <div class="field"><label>To</label><input type="text" placeholder="Delhi (DEL)"/></div>
+      <div class="field"><label>Depart</label><input type="text" placeholder="14 Jul 2026"/></div>
+      <div class="field"><label>Return</label><input type="text" placeholder="04 Aug 2026"/></div>
+      <button class="go" type="submit">Search <span class="arr">→</span></button>
+    </form>
+
+    <div class="flight-meta">
+      <span class="label">Popular routes from Brisbane</span>
+      <span class="legend">Indicative return economy fares · all incl. taxes</span>
+    </div>
+
+    <div class="destinations">
+      <div class="dest"><div class="left"><span class="city">Delhi</span><span class="country">India</span></div><div class="right"><span class="from">From</span><span class="price">$1,180<small>AUD</small></span></div></div>
+      <div class="dest"><div class="left"><span class="city">London</span><span class="country">United Kingdom</span></div><div class="right"><span class="from">From</span><span class="price">$1,690<small>AUD</small></span></div></div>
+      <div class="dest"><div class="left"><span class="city">Singapore</span><span class="country">Singapore</span></div><div class="right"><span class="from">From</span><span class="price">$640<small>AUD</small></span></div></div>
+      <div class="dest"><div class="left"><span class="city">Mumbai</span><span class="country">India</span></div><div class="right"><span class="from">From</span><span class="price">$1,240<small>AUD</small></span></div></div>
+      <div class="dest"><div class="left"><span class="city">Tokyo</span><span class="country">Japan</span></div><div class="right"><span class="from">From</span><span class="price">$890<small>AUD</small></span></div></div>
+      <div class="dest"><div class="left"><span class="city">Dubai</span><span class="country">UAE</span></div><div class="right"><span class="from">From</span><span class="price">$1,290<small>AUD</small></span></div></div>
+      <div class="dest"><div class="left"><span class="city">Bangkok</span><span class="country">Thailand</span></div><div class="right"><span class="from">From</span><span class="price">$590<small>AUD</small></span></div></div>
+      <div class="dest"><div class="left"><span class="city">New York</span><span class="country">United States</span></div><div class="right"><span class="from">From</span><span class="price">$1,950<small>AUD</small></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Why Son Travels</span>
+        <h2 style="margin-top:14px">Three reasons<br/><span class="ital">people come back.</span></h2>
       </div>
-    </section>
+      <p class="sub">A small Brisbane outfit beats a call centre on the things that matter — local relationships in India, a real person who knows your itinerary, and the patience to wait for the right fare instead of hawking the first one.</p>
+    </div>
 
-    <section class="section-padding cta-section">
-      <div class="container cta-card">
-        <div>
-          <p class="eyebrow">Ready to travel?</p>
-          <h2>Plan your India tour or request a worldwide flight ticket quote.</h2>
-        </div>
-        <a class="button light" href="#contact">Contact Us Today</a>
+    <div class="why-grid">
+      <div class="item">
+        <span class="num">01</span>
+        <h3>India, not just sold — known.</h3>
+        <p>Our founder grew up between Kerala and Brisbane and still spends three months a year on the ground. The drivers, hoteliers and guides we use are people we've eaten dinner with — not a faceless DMC margin layer.</p>
       </div>
-    </section>
+      <div class="item">
+        <span class="num">02</span>
+        <h3>Fares the comparison sites can't see.</h3>
+        <p>Through our IATA accreditation and consolidator partnerships we book inventory the public OTAs don't surface — particularly on Singapore Airlines, Qatar, Emirates and Air India long-haul.</p>
+      </div>
+      <div class="item">
+        <span class="num">03</span>
+        <h3>One human, end to end.</h3>
+        <p>The person who quotes your trip is the person who books it, holds your hand if a flight gets cancelled at 2am AEST, and re-routes you when it does. No tier-1, tier-2, ticket-number theatre.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="section-padding" id="contact">
-      <div class="container contact-grid">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Send us your travel request</h2>
-          <p>Replace the placeholder contact details below with your company’s real phone number, email, address, and social media links.</p>
-          <div class="contact-list">
-            <p><strong>Phone / WhatsApp:</strong> +000 000 000 000</p>
-            <p><strong>Email:</strong> info@sontravels.example</p>
-            <p><strong>Office:</strong> Your office address here</p>
-            <p><strong>Hours:</strong> Monday – Saturday, 9:00 AM – 6:00 PM</p>
-          </div>
-        </div>
+<section class="testi">
+  <div class="container">
+    <div class="grid">
+      <div class="photo">
+        <img src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=900&q=85&auto=format&fit=crop" alt="Traveller on Kerala backwaters at dusk" loading="lazy"/>
+      </div>
+      <div>
+        <span class="eyebrow">Traveller letter</span>
+        <blockquote style="margin-top:18px">
+          We've done India twice before with the big agencies. This was the first time it felt like someone had <span class="ital">actually thought</span> about the trip — the hotels in Udaipur, the timing of Pangong, even the driver between Munnar and Alleppey who turned out to know every spice farm on the way. <span class="ital">We'll be booking with you again.</span>
+        </blockquote>
+        <cite>— <b>Margaret &amp; Dean Hollis</b>, Brisbane &middot; Royal Rajasthan + Kerala, Mar 2026</cite>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <form class="contact-form" id="contactForm">
-          <label>
-            Full name
-            <input type="text" name="name" placeholder="Your name" required />
-          </label>
-          <label>
-            Email or phone
-            <input type="text" name="contact" placeholder="Email or phone number" required />
-          </label>
-          <label>
-            Travel service
-            <select name="service">
-              <option>India tour package</option>
-              <option>Worldwide flight ticket</option>
-              <option>Custom travel request</option>
-            </select>
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="5" placeholder="Tell us your destination, travel dates, number of travelers, and budget."></textarea>
-          </label>
-          <button class="button primary" type="submit">Send Request</button>
-          <p class="form-note" id="contactFormMessage" role="status"></p>
+<section class="cta-band" id="contact">
+  <div class="container">
+    <span class="eyebrow">Start the conversation</span>
+    <h2>Tell us where<br/>you'd <span class="ital">like to go.</span></h2>
+    <p>Whether it's a Golden Triangle in October or a one-way ticket to Lisbon next Tuesday — drop us a line and a real person in Brisbane will reply within one business day.</p>
+    <div class="actions">
+      <a href="mailto:hello@sontravels.com.au?subject=Trip%20enquiry" class="btn btn-terra">Email us <span class="arr">→</span></a>
+      <a href="tel:+61730000000" class="btn btn-ghost">Call +61 7 3000 0000</a>
+    </div>
+    <div class="email-line">or just write to <a href="mailto:hello@sontravels.com.au">hello@sontravels.com.au</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="grid">
+      <div class="brand">
+        <div class="logo"><span class="dot"></span>Son Travels<span class="sub">&amp; Tours</span></div>
+        <p>Brisbane-based specialists in curated India journeys and worldwide flight bookings since 2014. ABN registered &middot; IATA accredited &middot; ATAS member.</p>
+        <h4>The Dispatch — quarterly</h4>
+        <form class="news" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thank you';">
+          <input type="email" placeholder="your@email.com" aria-label="Email address" required/>
+          <button type="submit">Join</button>
         </form>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
       <div>
-        <a class="brand footer-brand" href="#top">
-          <span class="brand-mark">ST</span>
-          <span>
-            <strong>Son Travels</strong>
-            <small>& Tours Limited</small>
-          </span>
-        </a>
-        <p>India tours and worldwide flight ticket assistance.</p>
+        <h4>India Tours</h4>
+        <ul>
+          <li><a href="#tours">Golden Triangle</a></li>
+          <li><a href="#tours">Kerala Backwaters</a></li>
+          <li><a href="#tours">Ladakh &amp; Himalaya</a></li>
+          <li><a href="#tours">Varanasi</a></li>
+          <li><a href="#tours">Tiger Safari</a></li>
+          <li><a href="#tours">Royal Rajasthan</a></li>
+        </ul>
       </div>
       <div>
-        <h3>Explore</h3>
-        <a href="#tours">India Tours</a>
-        <a href="#flights">Flight Tickets</a>
-        <a href="#about">About Us</a>
+        <h4>Flights from BNE</h4>
+        <ul>
+          <li><a href="#flights">→ Delhi</a></li>
+          <li><a href="#flights">→ London</a></li>
+          <li><a href="#flights">→ Singapore</a></li>
+          <li><a href="#flights">→ Tokyo</a></li>
+          <li><a href="#flights">→ Dubai</a></li>
+          <li><a href="#flights">All destinations</a></li>
+        </ul>
       </div>
-      <div>
-        <h3>Contact</h3>
-        <a href="mailto:info@sontravels.example">info@sontravels.example</a>
-        <a href="tel:+000000000000">+000 000 000 000</a>
-        <a href="#contact">Request a quote</a>
+      <div class="contact">
+        <h4>Contact</h4>
+        <a href="mailto:hello@sontravels.com.au">hello@sontravels.com.au</a>
+        <a href="tel:+61730000000">+61 7 3000 0000</a>
+        <div class="small">Level 4, 123 Adelaide Street<br/>Brisbane QLD 4000<br/>Australia</div>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <p>© <span id="year"></span> Son Travels & Tours Limited. All rights reserved.</p>
+    <div class="bottom">
+      <div>© 2026 Son Travels &amp; Tours Limited. All rights reserved.</div>
+      <div class="made">Made <span class="ital">with care</span> in Brisbane</div>
+      <div class="legal">
+        <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Refunds</a>
+      </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script>
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-const year = document.querySelector('#year');
-const flightForm = document.querySelector('#flightForm');
-const flightFormMessage = document.querySelector('#flightFormMessage');
-const contactForm = document.querySelector('#contactForm');
-const contactFormMessage = document.querySelector('#contactFormMessage');
-
-year.textContent = new Date().getFullYear();
-
-navToggle.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', String(isOpen));
-});
-
-navLinks.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  });
-});
-
-flightForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const data = Object.fromEntries(new FormData(flightForm).entries());
-  flightFormMessage.textContent = `Thank you. We received your flight request from ${data.from} to ${data.to}. Connect this form to your email or booking system to receive live inquiries.`;
-  flightForm.reset();
-});
-
-contactForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const data = Object.fromEntries(new FormData(contactForm).entries());
-  contactFormMessage.textContent = `Thank you, ${data.name}. Your ${data.service.toLowerCase()} request is ready to be sent. Connect this form to your email or CRM to receive inquiries.`;
-  contactForm.reset();
-});
-
-</script>
 </body>
 </html>
